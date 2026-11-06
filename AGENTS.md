@@ -6,8 +6,12 @@
 - Work on `/wireframe/` only until the user explicitly approves final design.
 - Keep the prototype low-fidelity, monochrome, typography-led, with editable HTML/CSS and responsive layouts.
 - Preserve the nine approved content blocks and their order unless instructed otherwise.
-- The words are draft; do not invent testimonials, launch dates, integrations, metrics, prices, or scientific claims.
-- SUBTALE is a concept. Automated detection of missed meaning is a research hypothesis, not a working feature.
+- Public-facing copy in /wireframe/ should read like a launch-ready sales page: confident, human-readable and free of internal stage labels, AIDA markers, concepts, research caveats and developer notes.
+- Keep the factual distinction internally: SUBTALE is a project concept and automated discovery of missed meaning is an unvalidated mechanism. Never tell the user that a backend feature is implemented when it isn't.
+- Do not invent testimonials, launch dates, integrations, metrics, prices or scientific claims.
+- Do not replace visual-only image/video placeholders with technical placeholder captions. Keep the placeholder geometry but use consumer-facing labels only.
+- The comparison block must contrast common viewing workflows fairly, without claiming competitors lack functions that may overlap.
+- Preserve copy edits from the 2026-11-06 launch-narrative pass unless the user requests revisions.
 - Do not replace the wireframe with screenshots, generated image assets, or a fully styled brand design.
 - Keep future final site at the repository root. Preserve /wireframe/ for review and comparison.
 - Use branches/commits for subsequent iterations, not copies of entire projects in multiple folders.
