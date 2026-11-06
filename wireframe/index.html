@@ -3,17 +3,20 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="SUBTALE — черновой wireframe лендинга, девять блоков.">
-<title>SUBTALE — Wireframe v0.1</title><link rel="stylesheet" href="./wireframe.css">
+<link rel="icon" href="data:,">
+<link rel="preload" href="./fonts/Inter-variable.ttf" as="font" type="font/ttf" crossorigin>
+<title>SUBTALE — Wireframe v0.2</title><link rel="stylesheet" href="./wireframe.css">
 </head>
 <body>
-<div class="draftbar"><span>SUBTALE / WIREFRAME</span><span>V0.1 • 9 БЛОКОВ • ТЕКСТЫ ЧЕРНОВЫЕ</span></div>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+<div class="draftbar"><span>SUBTALE / WIREFRAME</span><span>V0.2 • 9 БЛОКОВ • ТЕКСТЫ ЧЕРНОВЫЕ</span></div>
 <header class="container header" id="top"><a class="logo" href="#top">subtale*</a><nav aria-label="Навигация"><a href="#problem">Проблема</a><a href="#how">Как работает</a><a href="#compare">Сравнение</a></nav><a class="button dark" href="#scene">Посмотреть пример ↗</a></header>
-<main>
+<main id="main">
 <section class="section container hero" aria-labelledby="hero-title">
 <div class="meta"><span>01 / HERO</span><span>ATTENTION</span></div>
 <div class="hero-grid">
  <div><p class="eyebrow">АНГЛИЙСКИЙ В КИНО · НЕ ТОЛЬКО ПЕРЕВОД</p><h1 id="hero-title">Замечай смыслы, которые <span class="muted">пропустил</span> в кино.</h1><p class="lead">SUBTALE — концепция сервиса, который помогает находить незамеченные шутки, идиомы и культурные отсылки в фильмах и сериалах на английском.</p><div class="actions"><a class="button dark" href="#solution">Узнать, как это работает ↘</a><small>Для тех, кто уже смотрит в оригинале</small></div></div>
- <div class="player hero-mock"><div class="mock-head">● &nbsp; ПРОСМОТР / ОРИГИНАЛ <span>01:24:16</span></div><div class="screen"><span class="play">▶</span><span class="subtitle">“Surely you can't be serious.”</span></div><div class="mock-foot"><small>01 / ЯЗЫКОВОЙ НЮАНС</small><h3>Знакомые слова.<br>Неочевидный смысл.</h3></div><span class="placeholder">PLACEHOLDER / ИНТЕРФЕЙС</span></div>
+ <div class="player hero-mock"><div class="mock-head">● &nbsp; ПРОСМОТР / ОРИГИНАЛ <span>01:24:16</span></div><div class="screen"><span class="play" aria-hidden="true">▶</span><span class="subtitle">“Surely you can't be serious.”</span></div><div class="mock-foot"><small>01 / ЯЗЫКОВОЙ НЮАНС</small><h3>Знакомые слова.<br>Неочевидный смысл.</h3></div><span class="placeholder">PLACEHOLDER / ИНТЕРФЕЙС</span></div>
 </div><p class="note">ЗАДАЧА: продукт + польза + возможное отличие. H1 и оффер уточним после HPV/4U.</p>
 </section>
 <section class="section tint" id="problem" aria-labelledby="problem-title"><div class="container">
@@ -28,7 +31,7 @@
 <section class="section container" id="solution" aria-labelledby="solution-title">
 <div class="meta"><span>03 / ЗНАКОМСТВО С ПРОДУКТОМ</span><span>INTEREST</span></div><div class="intro"><h2 id="solution-title">У каждого диалога есть <span class="muted">второй слой.</span></h2><div><p>SUBTALE помогает находить моменты, где буквального понимания недостаточно, и разбирать, что происходит в сцене.</p><small>КОНЦЕПТ — ФУНКЦИИ НЕ РЕАЛИЗОВАНЫ</small></div></div>
 <div class="solution">
-<div class="player"><div class="screen"><span class="play">▶</span><span class="subtitle">An English line with a hidden meaning</span></div><div class="controls">▶ &nbsp; 00:42 / 01:16 <span>━━━━━━━━━━━━━━</span> ⛶</div></div>
+<div class="player"><div class="screen"><span class="play" aria-hidden="true">▶</span><span class="subtitle">An English line with a hidden meaning</span></div><div class="controls">▶ &nbsp; 00:42 / 01:16 <span>━━━━━━━━━━━━━━</span> ⛶</div></div>
 <div class="side"><div class="space-between"><small>РАЗБОР СЦЕНЫ</small><small>01 / 04</small></div><h3>Не только «что сказали», но и «что имели в виду».</h3><p>01 &nbsp; Оригинальная реплика</p><p>02 &nbsp; Твоя интерпретация</p><p>03 &nbsp; Объяснение и культурный контекст</p><p>04 &nbsp; Возврат к моменту</p><small class="side-bottom">PLACEHOLDER / СОСТОЯНИЕ ИНТЕРФЕЙСА</small></div>
 </div><p class="note">ЗАДАЧА: показать основной интерфейс и разбор без ложных обещаний интеграций.</p></section>
 <section class="section inverse" id="modes" aria-labelledby="modes-title"><div class="container">
@@ -47,27 +50,27 @@
 </div><p class="note">ЗАДАЧА: объяснить последовательность действий, не заявляя её реализованной.</p></section>
 <section class="section mid" id="scene" aria-labelledby="scene-title"><div class="container">
 <div class="meta"><span>06 / ОДНА СЦЕНА, ДВА СМЫСЛА</span><span>DESIRE · ДЕМОНСТРАЦИЯ</span></div><div class="intro"><h2 id="scene-title">Сначала твоя версия. <span class="muted">Потом — второй смысл.</span></h2><p>Пример проверки не знания слов, а интерпретации сцены. Механика раскрытия пока прототип.</p></div>
-<div class="scene"><div class="player scene-picture"><div class="screen"><span class="play">▶</span><small>КИНОКАДР / ПЛЕЙСХОЛДЕР</small></div><div class="subtitle-static">“Surely you can't be serious.”</div></div><div class="scene-card"><small>01 / СОБСТВЕННАЯ ТРАКТОВКА</small><h3>Что ты услышал в этой реплике?</h3><p>До подсказки попробуй объяснить, почему следующая реплика может оказаться шуткой.</p><div class="input-ghost">Твоя версия — текст / выбор варианта</div><details><summary>Показать второй смысл <span>+</span></summary><p><b>Surely</b> («неужели / конечно») звучит похоже на <b>Shirley</b> — женское имя. Ответ «Don't call me Shirley» обыгрывает это созвучие. Важно не только значение слова, но и реакция персонажа.</p></details></div></div>
+<div class="scene"><div class="player scene-picture"><div class="screen"><span class="play" aria-hidden="true">▶</span><small>КИНОКАДР / ПЛЕЙСХОЛДЕР</small></div><div class="subtitle-static">“Surely you can't be serious.”</div></div><div class="scene-card"><small>01 / СОБСТВЕННАЯ ТРАКТОВКА</small><h3>Что ты услышал в этой реплике?</h3><p>До подсказки попробуй объяснить, почему следующая реплика может оказаться шуткой.</p><label class="interpretation" for="interpretation">Твоя версия — текст / выбор варианта</label><textarea id="interpretation" name="interpretation" rows="3"></textarea><details><summary>Показать второй смысл <span aria-hidden="true">+</span></summary><p><b>Surely</b> («неужели / конечно») звучит похоже на <b>Shirley</b> — женское имя. Ответ «Don't call me Shirley» обыгрывает это созвучие. Важно не только значение слова, но и реакция персонажа.</p></details></div></div>
 <p class="note">ЗАДАЧА: сначала интерпретация — потом раскрытие.</p></div></section>
 <section class="section container" id="compare" aria-labelledby="compare-title">
 <div class="meta"><span>07 / СРАВНЕНИЕ ПОДХОДОВ</span><span>DESIRE</span></div><div class="intro"><h2 id="compare-title">Больше, чем <span class="muted">перевод реплик.</span></h2><p>Сравниваем не компании и не количество функций, а способы взаимодействовать с кино.</p></div>
-<div class="table-wrap"><table><thead><tr><th>ЗАДАЧА</th><th>Обычный перевод</th><th>Инструменты изучения языка</th><th>SUBTALE <small>КОНЦЕПЦИЯ</small></th></tr></thead><tbody>
-<tr><th>Главный фокус</th><td>Передать содержание реплики</td><td>Объяснить язык и помочь запомнить материал</td><td>Найти и разобрать второй смысл сцены</td></tr>
-<tr><th>Что запускает разбор</th><td>Запрос на перевод</td><td>Выбранное слово, выражение или учебный материал</td><td>Отметка зрителя или предлагаемая подборка</td></tr>
-<tr><th>Когда взаимодействовать</th><td>По необходимости</td><td>Часто во время просмотра или изучения</td><td>В проектном сценарии преимущественно после просмотра</td></tr>
-<tr><th>Ключевой результат</th><td>Понимание содержания</td><td>Изучение языковых единиц и контекста</td><td>Проверка своей трактовки и открытие подтекста</td></tr>
+<div class="table-wrap"><table role="table"><caption class="visually-hidden">Сравнение подходов к пониманию сцены</caption><thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">ЗАДАЧА</th><th role="columnheader" scope="col">Обычный перевод</th><th role="columnheader" scope="col">Инструменты изучения языка</th><th role="columnheader" scope="col">SUBTALE <small>КОНЦЕПЦИЯ</small></th></tr></thead><tbody role="rowgroup">
+<tr role="row"><th role="rowheader" scope="row">Главный фокус</th><td role="cell" data-label="Обычный перевод">Передать содержание реплики</td><td role="cell" data-label="Инструменты изучения языка">Объяснить язык и помочь запомнить материал</td><td role="cell" data-label="SUBTALE · КОНЦЕПЦИЯ">Найти и разобрать второй смысл сцены</td></tr>
+<tr role="row"><th role="rowheader" scope="row">Что запускает разбор</th><td role="cell" data-label="Обычный перевод">Запрос на перевод</td><td role="cell" data-label="Инструменты изучения языка">Выбранное слово, выражение или учебный материал</td><td role="cell" data-label="SUBTALE · КОНЦЕПЦИЯ">Отметка зрителя или предлагаемая подборка</td></tr>
+<tr role="row"><th role="rowheader" scope="row">Когда взаимодействовать</th><td role="cell" data-label="Обычный перевод">По необходимости</td><td role="cell" data-label="Инструменты изучения языка">Часто во время просмотра или изучения</td><td role="cell" data-label="SUBTALE · КОНЦЕПЦИЯ">В проектном сценарии преимущественно после просмотра</td></tr>
+<tr role="row"><th role="rowheader" scope="row">Ключевой результат</th><td role="cell" data-label="Обычный перевод">Понимание содержания</td><td role="cell" data-label="Инструменты изучения языка">Изучение языковых единиц и контекста</td><td role="cell" data-label="SUBTALE · КОНЦЕПЦИЯ">Проверка своей трактовки и открытие подтекста</td></tr>
 </tbody></table></div><p class="footnote">Сравниваются типовые сценарии, не весь функционал конкурентов. Другие сервисы уже разбирают контекст и сохраняют объяснения.</p>
 <p class="note">ЗАДАЧА: показать разницу в подходе без недоказанных заявлений о превосходстве.</p></section>
 <section class="section tint" id="faq" aria-labelledby="faq-title"><div class="container">
 <div class="meta"><span>08 / FAQ</span><span>DESIRE → ACTION</span></div><div class="faq"><div><h2 id="faq-title">Вопросы, которые <span class="muted">возникают сразу.</span></h2><p>Честно обозначаем границы концепции, не обещая неподтвержденные возможности.</p></div><div class="faq-list">
-<details><summary>Нужно ли останавливать фильм? <span>+</span></summary><p>Проектируемый сценарий предполагает быстрые отметки во время просмотра и разбор после него. Удобство ещё предстоит проверить.</p></details>
-<details><summary>Какие фильмы и платформы поддерживаются? <span>+</span></summary><p>Совместимость пока не определена. В прототипе демонстрируем принцип на выбранной сцене.</p></details>
-<details><summary>Как сервис определяет незамеченные смыслы? <span>+</span></summary><p>Автопоиск — исследовательская гипотеза. Потребуется проверка полноты находок и ложных срабатываний.</p></details>
-<details><summary>SUBTALE заменяет курс английского? <span>+</span></summary><p>Нет. Концепция сосредоточена на нюансах языка и культуры в кино, а не на полном курсе грамматики.</p></details>
-<details><summary>Когда можно попробовать? <span>+</span></summary><p>Дата запуска не определена. Пока доступен демонстрационный сценарий на этой странице.</p></details>
+<details><summary>Нужно ли останавливать фильм? <span aria-hidden="true">+</span></summary><p>Проектируемый сценарий предполагает быстрые отметки во время просмотра и разбор после него. Удобство ещё предстоит проверить.</p></details>
+<details><summary>Какие фильмы и платформы поддерживаются? <span aria-hidden="true">+</span></summary><p>Совместимость пока не определена. В прототипе демонстрируем принцип на выбранной сцене.</p></details>
+<details><summary>Как сервис определяет незамеченные смыслы? <span aria-hidden="true">+</span></summary><p>Автопоиск — исследовательская гипотеза. Потребуется проверка полноты находок и ложных срабатываний.</p></details>
+<details><summary>SUBTALE заменяет курс английского? <span aria-hidden="true">+</span></summary><p>Нет. Концепция сосредоточена на нюансах языка и культуры в кино, а не на полном курсе грамматики.</p></details>
+<details><summary>Когда можно попробовать? <span aria-hidden="true">+</span></summary><p>Дата запуска не определена. Пока доступен демонстрационный сценарий на этой странице.</p></details>
 </div></div><p class="note">ЗАДАЧА: снять вопросы о формате, точности, совместимости и готовности.</p></div></section>
 <section class="section inverse" id="action" aria-labelledby="action-title"><div class="container">
 <div class="meta"><span>09 / ФИНАЛЬНОЕ ДЕЙСТВИЕ</span><span>ACTION</span></div><div class="cta"><h2 id="action-title">Следующий фильм ты можешь <span class="muted">увидеть иначе.</span></h2><div><p>SUBTALE — концепция инструмента для тех, кому интересно не только понимать слова, но и раскрывать смысл за ними.</p><a class="button light" href="#scene">Посмотреть пример разбора ↗</a><small>Пока демо на странице; подписка и релиз не готовы.</small></div></div><p class="note">ЗАДАЧА: одна конкретная CTA — позже заменим на реальную форму или демо.</p></div></section>
 </main>
-<footer class="container footer"><b class="logo">subtale*</b><span>WIREFRAME V0.1 · STRUCTURE V2.1</span><a href="#top">Наверх ↑</a></footer>
+<footer class="container footer"><b class="logo">subtale*</b><span>WIREFRAME V0.2 · STRUCTURE V2.1</span><a href="#top">Наверх ↑</a></footer>
 </body></html>
