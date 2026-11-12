@@ -42,3 +42,17 @@
 Проверен переход с корневой страницы на `/wireframe/`. Программно сопоставлен текст с предыдущим коммитом: основной черновой контент сохранён. `git diff --check` — без ошибок.
 
 Проверка ограничена Chrome; Safari, Firefox и физические мобильные устройства не проверялись. Это прототип интерфейса: просмотр видео, интеграции и автоматическое обнаружение смыслов не реализованы. Развёртывание и настройки GitHub Pages не выполнялись.
+
+## Copy revision — 2026-11-12
+
+Implemented directly in main, from 606598b, following docs/copy-audit.md and the user's instruction to edit the live HTML rather than prepare another approval document.
+
+- Replaced the hidden-meaning pitch with cinema in English, contextual language practice, and help during/after viewing. Removed blame, command-heavy headings and the guaranteed next-film outcome.
+- Kept all nine sections and existing styling. The two-card section now contrasts during/after viewing; it no longer promises automatic discovery.
+- All three primary CTAs say “Посмотреть пример” and link to the working #scene example. The answer remains optional and is not presented as an automated assessment.
+- Comparison describes overlapping workflows, with planned SUBTALE behavior explicitly identified. FAQ distinguishes the working on-page example from planned playback, explanations and saved moments; no platforms, prices, launch dates or required language level were invented.
+- Used Russian Editorial for substantive editing and Sasha for CTA, field labels and FAQ. Humanizer was not invoked.
+
+Validation: local headless Chrome via Playwright at 1440, 768, 390 and 320 px. Nine sections, one H1, no broken anchor targets, no horizontal page overflow or overflowing text containers, including expanded scene/FAQ. Checked all three CTAs, textarea entry and persistence while toggling the explanation, mouse/keyboard reveal, all five FAQ toggles, visible keyboard focus/skip link, reduced-motion behavior and resource/console errors. Inspected desktop/mobile screenshots. CSS, fonts, table semantics, section IDs and existing native interactions are preserved. git diff --check passed.
+
+Limits: viewport checks are browser emulation, not physical-device or Safari testing. Media areas remain visual placeholders. Full playback, platform compatibility, saved moments, explanation quality, educational outcomes and release conditions remain product questions; this copy revision does not implement them. The historical copy audit describes the previous version and is retained as the rationale, not a report of current defects.
