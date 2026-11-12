@@ -21,3 +21,12 @@
 - Run locally and test 1440px and 390px widths, focus visibility, overflowing text, and the scene reveal / FAQ.
 - Explain meaningful changes, files touched, and verification results.
 - Do not silently rewrite approved copy or change the scope.
+
+
+## Editorial skills and workflow
+Project-scoped Codex skills: `.agents/skills/russian-editorial/`, `.agents/skills/sasha/`, `.agents/skills/humanizer-ru/`.
+- Substantive copy and claims: `$russian-editorial` (audit/write/edit).
+- Interface microcopy and CTAs: `$sasha`.
+- Optional single final pass for natural Russian: `$humanizer-ru`.
+Do not invoke all three by default. Preserve approved claims and voice; never fabricate integration, streaming compatibility, launch results, pricing, testimonials, or statistics.
+Follow `docs/gridnev-roadmap.md` in separate iterations. First content task: audit in Markdown only, no HTML/CSS changes. Do not revert changes in `main` by merging the old `codex/refine-wireframe` content blindly.
