@@ -14,7 +14,7 @@
 - Preserve copy edits from the 2026-11-06 launch-narrative pass unless the user requests revisions.
 - Do not replace the wireframe with screenshots, generated image assets, or a fully styled brand design.
 - Keep future final site at the repository root. Preserve /wireframe/ for review and comparison.
-- Use branches/commits for subsequent iterations, not copies of entire projects in multiple folders.
+- Branch policy for this project: work directly in `main` and make small, descriptive commits. Do not create `codex/*` or other working branches unless the user explicitly asks. Preserve reviewability through the Git history, not parallel copies.
 - Never enable public GitHub Pages without the user's explicit approval.
 
 ## Review / quality
@@ -29,4 +29,4 @@ Project-scoped Codex skills: `.agents/skills/russian-editorial/`, `.agents/skill
 - Interface microcopy and CTAs: `$sasha`.
 - Optional single final pass for natural Russian: `$humanizer-ru`.
 Do not invoke all three by default. Preserve approved claims and voice; never fabricate integration, streaming compatibility, launch results, pricing, testimonials, or statistics.
-Follow `docs/gridnev-roadmap.md` in separate iterations. First content task: audit in Markdown only, no HTML/CSS changes. Do not revert changes in `main` by merging the old `codex/refine-wireframe` content blindly.
+Follow `docs/gridnev-roadmap.md` in separate iterations, all in `main`. `docs/copy-audit.md` is already available. Next task: propose Hero and section copy in `docs/copy-v3.md` for approval; do not edit HTML/CSS before approval. The refined wireframe changes have already been consolidated into `main`.

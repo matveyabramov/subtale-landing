@@ -59,3 +59,7 @@ A direct tip-to-tip diff also exposes old draft copy and internal labels in refi
 4. Humanizer only on an explicit request for a final style pass, followed by a factual comparison.
 
 Keep research hypotheses separate from publishable claims. A commercial voice or classroom scenario does not prove integrations, automatic discovery, learning outcomes or release readiness.
+
+
+## Consolidation update (2026-11-12)
+The branch-comparison section above records the state **before consolidation** and is retained as historical audit evidence. The editorial audit and complete ZIP-based skills were fast-forwarded to `main`, and the refined wireframe improvements were incorporated while preserving the newer launch copy. Final merge commit: [`418597fa`](https://github.com/matveyabramov/subtale-landing/commit/418597fa8fc3f784091bc721cfffb903b07c350e). Both working branch tips are now ancestors of `main`. New Codex changes go straight to `main` unless the user expressly requests otherwise.

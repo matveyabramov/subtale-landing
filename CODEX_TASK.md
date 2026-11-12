@@ -12,3 +12,7 @@ You are working in the EXISTING GitHub repository `matveyabramov/subtale-landing
 8. Do not write final HPV/4U copy, fabricate capabilities or create extra versions of the repository. Summarize changes and checks at completion.
 
 Sources: https://app.notion.com/p/410d343c871281cb92f5d29dcdd494bf ; https://www.figma.com/design/R0DPBw0LdQMhTqtGCoDyiG/?node-id=1-2 ; https://www.figma.com/design/z56O7WXjQDHcxvP1DrxekA/?node-id=0-1
+
+
+## Branch policy (updated)
+Use `main` for all upcoming Codex tasks in this repository. Do **not** create a working branch or PR unless the user explicitly requests one. Keep changes scoped and committed individually. The historical `codex/refine-wireframe` and `codex/editorial-copy-audit` commits have already been consolidated into `main`.
