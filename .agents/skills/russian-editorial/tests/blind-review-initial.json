@@ -1,0 +1,186 @@
+[
+  {
+    "id": "T01",
+    "scores_A": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "scores_B": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "critical_A": [],
+    "critical_B": [],
+    "preference": "B",
+    "reason": "Оба ответа объясняют состав услуги без выдуманных сроков, цены и результатов. B точнее обозначает небольшие компании и даёт содержательный повод для обсуждения задачи; преимущество небольшое, оценки одинаковы."
+  },
+  {
+    "id": "T02",
+    "scores_A": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "scores_B": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "critical_A": [],
+    "critical_B": [],
+    "preference": "tie",
+    "reason": "Оба письма сохраняют выбор двух из четырёх макетов, четверг, вложение и зависимость передачи в типографию от выбора. A явно просит один ответ; единая конкретная просьба в B также выполняет задачу. Спокойный тон и отсутствие новых последствий соблюдены."
+  },
+  {
+    "id": "T03",
+    "scores_A": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "scores_B": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "critical_A": [],
+    "critical_B": [],
+    "preference": "B",
+    "reason": "Оба ответа остаются аудитом, оценивают полезность, доказательства и структуру, задают приоритеты и не принимают исходные заявления за факты. B компактнее и прямо объясняет, что удовлетворённость не доказывает рост продаж; A подробнее раскрывает проверку причинности и чисел. Небольшое предпочтение B за удобство чтения, без преимущества по баллам."
+  },
+  {
+    "id": "T04",
+    "scores_A": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "scores_B": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "critical_A": [],
+    "critical_B": [],
+    "preference": "tie",
+    "reason": "Ответы идентичны и уместно сохраняют хороший исходник. Область наблюдений, предположительность связи, невозможность доказать универсальную понятность и необходимость пользовательского тестирования сохранены."
+  },
+  {
+    "id": "T05",
+    "scores_A": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "scores_B": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "critical_A": [],
+    "critical_B": [],
+    "preference": "tie",
+    "reason": "Ответы идентичны: сообщают дату, закрытый вход и доступный маршрут. Время и причина не придуманы; для короткого уведомления дополнительная аргументация не требуется."
+  },
+  {
+    "id": "T06",
+    "scores_A": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "scores_B": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "critical_A": [],
+    "critical_B": [],
+    "preference": "A",
+    "reason": "Оба ответа верно считают прирост в 6 заявок и 50%, сообщают о рекламе и снимают причинный вывод о дизайне и UX. A немного точнее формулирует пояснение: выражение B «рост за два месяца» менее ясно, чем сравнение двух месячных периодов. В основном тексте B периоды названы точно, поэтому это не фактическое искажение и не основание снижать оценку."
+  },
+  {
+    "id": "T07",
+    "scores_A": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "scores_B": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "critical_A": [],
+    "critical_B": [],
+    "preference": "A",
+    "reason": "Оба ответа точно переносят тарифы, цены, число проектов и форматы экспорта в компактную таблицу, не добавляя неизвестных возможностей. A дополнительно помогает выбрать тариф диапазонами числа проектов; они следуют из указанных лимитов и критерия выбора. B также полностью решает задачу."
+  },
+  {
+    "id": "T08",
+    "scores_A": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "scores_B": {
+      "utility": 2,
+      "facts": 2,
+      "reasoning": 2,
+      "presentation": 2,
+      "voice": 2,
+      "instruction": 2
+    },
+    "critical_A": [],
+    "critical_B": [],
+    "preference": "tie",
+    "reason": "Ответы идентичны и сохраняют исходный голос личного эссе, образность и сомнение рассказчика. Ненужное переписывание не требуется; новых эмоций и подмены жанра нет."
+  }
+]

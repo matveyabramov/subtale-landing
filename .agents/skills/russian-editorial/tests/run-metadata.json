@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-12",
+  "generation": "Two independent fresh agent contexts; same inherited session model; eight prompts identical; model ID, sampling seed and temperature were not exposed",
+  "evaluation": "Separate fresh reviewer, per-pair A/B randomized with a saved deterministic mapping; one subjective judge",
+  "course_source_validation": "Full extracted text of 19 lessons read across three source-validation contexts, all 126 block anchors checked against provided subtitles",
+  "working_files_sha256": {
+    "SKILL.md": "624d1a386205ebcc149a44ec1cb46c087c7624b453008639f9871b69fb704cba",
+    "references/audience.md": "142ab25978afbd559f2f832d16ac752c69bafae610ee82cffda05faec95d0ccf",
+    "references/compatibility.md": "4e256ae965d1d3cb19daceb83b6beecebd8d0efaa5de78517365c449bd7ac925",
+    "references/context.md": "da2ca40d882da0a3203162f88f8b1f5038dbbe913d1a5adb1ccf4782ad87d4b3",
+    "references/editor-role.md": "d08c50134a6cb0b77e333e5aceb5952d2a70c3b9319800a6d7758faa055bcd2b",
+    "references/evidence.md": "01bd09686ce1d8bb701ba0834fa9fa225bf5683c400fb45ef06168ffd234900f",
+    "references/examples.md": "73b5a6125ae98a55483af31ebd256860045d0e6e5056794d02d23a1b0d174ada",
+    "references/sources.md": "9a6bb5ee0b97945de37f5cc66397e9ea4d6c67ed763b7e9401ea3304f416f309",
+    "references/structure.md": "005307c37bb33cd35307062ac5d488b10e081680f5e05964dd21b78ed05c9750"
+  },
+  "transcripts_bundled": false,
+  "humanizer_original_sha256": "4609acd000e633f5c2534c5b8b769b2bcb52d1324db7ad0c10b910edbca8b71f",
+  "snapshot_scope": "Final frozen working instructions, used for final generation. Initial run retained separately; final prompts were unchanged.",
+  "iterations": 2,
+  "holdout_review": "Two new tasks after revisions; reviewed against explicit user requirements by main agent, not blinded",
+  "integration_review": "Three integration cases executed; self-reported skills_used and manual inspection of raw outputs"
+}

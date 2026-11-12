@@ -1,0 +1,34 @@
+{
+  "T01": {
+    "A": "before",
+    "B": "after"
+  },
+  "T02": {
+    "A": "after",
+    "B": "before"
+  },
+  "T03": {
+    "A": "after",
+    "B": "before"
+  },
+  "T04": {
+    "A": "before",
+    "B": "after"
+  },
+  "T05": {
+    "A": "before",
+    "B": "after"
+  },
+  "T06": {
+    "A": "after",
+    "B": "before"
+  },
+  "T07": {
+    "A": "before",
+    "B": "after"
+  },
+  "T08": {
+    "A": "before",
+    "B": "after"
+  }
+}

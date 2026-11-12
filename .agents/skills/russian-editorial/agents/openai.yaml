@@ -1,0 +1,14 @@
+interface:
+  display_name: Russian Editorial
+  short_description: Написание и содержательная редактура русских текстов
+  default_prompt: 'Используй $russian-editorial: определи режим и подготовь русский
+    текст под задачу читателя.'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

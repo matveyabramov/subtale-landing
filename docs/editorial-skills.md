@@ -1,44 +1,61 @@
-# Editorial skills for Codex — source integrity and workflow
+# Editorial skills — source integrity and workflow
 
-Codex scans `.agents/skills/<name>/SKILL.md` inside the repository. The three skills present in this repository are:
+Verified 2026-11-12 against `main` at `4b96bfbc50c2fbe774ea18576f16080dd8c1d32b`.
 
-| Skill | Installed content | Origin |
+## Installed project packages
+
+| Skill | Installed content | Authoritative source |
 |---|---|---|
-| `sasha` | Complete 12-file skill directory with scripts and test | `mishanaer/deslop`, main (checked 2026-11-12) |
-| `humanizer-ru` | Complete 21-file public upstream directory | `ilyautov/humanizer-ru`, main (checked 2026-11-12) |
-| `russian-editorial` | **Self-contained, reduced project adaptation** | Prepared from user's uploaded `russian-editorial(1).zip` (not a full ZIP import) |
+| `russian-editorial` | Complete 28-file tree: references, 19-lesson manifest, icon and test artifacts | User archive `russian-editorial(1).zip` |
+| `humanizer-ru` | Complete 21-file tree; replaces the previous upstream variant | User archive `humanizer-ru(1).zip` |
+| `sasha` | Existing 12-file tree, unchanged | Existing main; origin recorded as `mishanaer/deslop` |
 
-## Source differences that matter
+Both imported directories were replaced as whole trees, not merged or rewritten. Every installed file was compared byte-for-byte with its ZIP member; the path sets also match exactly. No original content was omitted, including INSTALL.md and historical evaluation artifacts. Those artifacts are source material, not newly executed evaluations.
 
-The user-supplied `humanizer-ru(1).zip` was **not copied byte-for-byte**. Its version differs from the selected upstream in five files:
-- `SKILL.md`
-- `references/catalog.md`
-- `scripts/humanizer_metrics/facts.py`
-- `scripts/humanizer_metrics/mcp_server.py`
-- `scripts/scan.py`
+Archive SHA-256:
 
-The remaining 16 files matched upstream by Git blob SHA.
+```text
+f710b6e44fa8102219c36e9e1a8180f58f6fd339941f585a2d75c2dbb475b58a  russian-editorial(1).zip
+d8ccbe7669052c04f35d9612b77a6b8d267a4aff3fac85b9c69e2a03fcb8abf2  humanizer-ru(1).zip
+```
 
-The user-supplied `russian-editorial(1).zip` has 28 files, including the 19-lesson source manifest and a test suite. The project adaptation currently has only `SKILL.md` and `references/compatibility.md`. **The original course references, examples, source manifest and tests are not in the repo.** For full-fidelity editorial work, import the complete user-supplied folder before relying on the source-specific details. Do not claim that the full personal skill is installed until this is done.
+The previous reduced Russian Editorial had only two files. The previous Humanizer variant differed from this archive in SKILL.md, references/catalog.md, scripts/humanizer_metrics/facts.py, scripts/humanizer_metrics/mcp_server.py and scripts/scan.py. The archive versions now take precedence; no original instructions were edited.
 
-The original archive passed its own `tests/validate_structure.py`: metadata, relative links, 19 source records, 8 paired test artifacts. The original Humanizer scanner requires an optional Python dependency (`razdel`) that was unavailable in the verification environment.
+## Verification
 
-## Full-fidelity replacement
+Run from the repository root:
 
-When the original ZIP archives are available in Codex's workspace:
+```bash
+python3 .agents/skills/russian-editorial/tests/validate_structure.py
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s .agents/skills/sasha/tests -v
+```
 
-1. Unzip `russian-editorial(1).zip` and `humanizer-ru(1).zip` into a temporary directory.
-2. Replace the corresponding project folders with **the complete** `russian-editorial/` and `humanizer-ru/` trees.
-3. Keep `sasha/` unchanged.
-4. Run `python3 .agents/skills/russian-editorial/tests/validate_structure.py` from inside the skill directory (where its relative paths work); verify three frontmatter `name` values.
-5. Commit the resulting diff. Do not rewrite the original skill source or merge two versions file by file.
-6. Check for duplicate user-level or project-level skills with the same name.
+- Russian Editorial validator: PASS (metadata, relative references, 19 source records, 8 paired test artifacts, clean package). It resolves its own root; a special working directory is not required.
+- Sasha: all 6 unit tests passed. No source files changed; its Git tree remains `b7ca2dde7b145c073b010870d91163e001c4680e`.
+- All three SKILL.md files have matching name frontmatter; all Python files parse successfully via ast.parse without generating bytecode.
+- Humanizer has no bundled test suite. Scanner availability was checked with `--help` only, without landing copy. The environment lacks razdel, so the scanner reports missing dependencies. No style scan, rewrite or Humanizer editorial pass was performed.
+- Russian Editorial's comparative evaluation protocol was read; the historical eight-task experiment was not rerun. Structural validation does not establish editorial effectiveness or client loading in every environment.
+- Project scope has one directory per skill name. Personal Russian Editorial and Humanizer also appear in this session's catalog; they were not modified. Explicitly read the project SKILL.md and its local references for reproducible project work. Matching names do not establish identical versions.
 
-## Editorial task order
+## Branch comparison — no merge
 
-1. `$russian-editorial` audit first: audience, user value, facts, thesis, proof, layout and repetition, without rewriting.
-2. `$russian-editorial` edit/write after the audit has been reviewed. Offer alternatives for Hero and section headings.
-3. `$sasha` for CTA, FAQ, labels and other UI microcopy (not as a second general-purpose rewriting pass).
-4. `$humanizer-ru` only when explicitly requested for one conservative style pass, then compare factual claims before/after.
+| Ref | SHA |
+|---|---|
+| Base main | `4b96bfbc50c2fbe774ea18576f16080dd8c1d32b` |
+| codex/refine-wireframe | `d699059` |
+| Common ancestor | `7f1acc7a671754292eb65610c9a146e28e8e1420` |
 
-Keep research notes and unverified product features separate from publishable claims.
+The branches diverged: refine-wireframe has 1 unique commit, main has 6. Main contains the launch-copy pass, answer-field/CSS work, Pages workflow, editorial skills and roadmap documentation.
+
+The refine commit changes five paths relative to the common ancestor: wireframe/REVIEW.md, wireframe/fonts/Inter-variable.ttf, wireframe/fonts/OFL.txt, wireframe/index.html and wireframe/wireframe.css (379 insertions, 19 deletions, plus the binary font). It adds local Inter/preloading, responsive sizing and grids, mobile comparison layout, focus/skip-link support, reduced-motion handling, decorative aria attributes and an editable answer field. Its REVIEW.md records earlier QA, not checks rerun here.
+
+A direct tip-to-tip diff also exposes old draft copy and internal labels in refine-wireframe. A blind merge risks restoring those labels or superseded wording and conflicting with main's answer-field styles. A future transfer must select technical changes individually while preserving approved copy. No merge, cherry-pick, landing or Pages configuration change was made. Browser layout QA is deferred because this task changes only skill packages and Markdown.
+
+## Editorial order
+
+1. Russian Editorial / audit: audience, value, claims, thesis, evidence and repetition. Current result: [copy-audit.md](copy-audit.md).
+2. After review, Russian Editorial / edit or / write for separate copy-v3.md with headings, supporting text and CTA proposals.
+3. Sasha for targeted interface microcopy, not a second general rewriting pass.
+4. Humanizer only on an explicit request for a final style pass, followed by a factual comparison.
+
+Keep research hypotheses separate from publishable claims. A commercial voice or classroom scenario does not prove integrations, automatic discovery, learning outcomes or release readiness.
