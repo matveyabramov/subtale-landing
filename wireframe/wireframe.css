@@ -822,3 +822,373 @@ textarea: :placeholder {
     font-size: 34px;
   }
 }
+/* Illustrated scenes, deliberately without a video transport or fake playback. */
+.hero-story {
+  padding: 0;
+  overflow: hidden;
+  min-height: 0;
+}
+.hero-setting {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 24px;
+  font-size: 14px;
+  color: #555;
+}
+.hero-setting span:last-child {
+  white-space: nowrap;
+}
+.cafe-art {
+  height: 195px;
+  position: relative;
+  overflow: hidden;
+  background: #d8d8d8;
+  border-block: 1px solid #bbb;
+}
+.cafe-window {
+  position: absolute;
+  top: 16px;
+  left: 33%;
+  width: 34%;
+  height: 110px;
+  border: 1px solid #aaa;
+  background: #eee;
+}
+.cafe-window:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  border-left: 1px solid #aaa;
+}
+.figure {
+  position: absolute;
+  top: 83px;
+  width: 64px;
+  height: 90px;
+  background: #929292;
+  border-radius: 24px 24px 0 0;
+}
+.figure:before {
+  content: '';
+  position: absolute;
+  top: -43px;
+  left: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #777;
+}
+.figure-left {
+  left: 15%;
+}
+.figure-right {
+  right: 15%;
+  background: #aaa;
+}
+.cafe-table {
+  position: absolute;
+  top: 145px;
+  left: 22%;
+  width: 56%;
+  height: 12px;
+  background: #777;
+}
+.cafe-table:after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 47%;
+  width: 12px;
+  height: 80px;
+  background: #777;
+}
+.cup {
+  position: absolute;
+  width: 22px;
+  height: 25px;
+  top: 120px;
+  background: #eee;
+  border: 1px solid #888;
+}
+.cup-left {
+  left: 37%;
+}
+.cup-right {
+  right: 37%;
+}
+.bill {
+  position: absolute;
+  top: 113px;
+  left: 49%;
+  width: 27px;
+  height: 34px;
+  background: #fafafa;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 32px;
+  transform: rotate(-8deg);
+  transition: transform .25s;
+}
+.hero-story[data-step="1"] .bill,.hero-story[data-step="2"] .bill {
+  transform: translateX(-55px) rotate(8deg);
+}
+.hero-caption {
+  background: #242424;
+  color: #fff;
+  padding: 24px;
+  min-height: 172px;
+}
+.hero-caption p:first-child {
+  font-size: 27px;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+.hero-caption p:last-child {
+  font-size: 16px;
+  color: #d0d0d0;
+  margin: 0;
+}
+.story-controls {
+  display: flex;
+  padding: 12px;
+  gap: 8px;
+  background: #fff;
+}
+.story-controls button {
+  flex: 1;
+  min-height: 44px;
+  padding: 10px 6px;
+  background: transparent;
+  border: 1px solid #aaa;
+  font-size: 14px;
+}
+.story-controls button[aria-pressed="true"] {
+  background: #191919;
+  color: #fff;
+}
+.story-controls button:focus-visible {
+  outline-color: #191919;
+}
+.value-section {
+  border-top: 1px solid var(--line);
+  padding-block: 64px;
+}
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 40px;
+}
+.value-grid article {
+  border-top: 1px solid #aaa;
+  padding-top: 24px;
+}
+.value-grid h3 {
+  margin-bottom: 16px;
+  font-size: 25px;
+}
+.value-grid p {
+  color: var(--mid);
+  font-size: 17px;
+  margin: 0;
+}
+.dialogue-stage {
+  display: block;
+  padding: 0;
+  background: #2b2b2b;
+  min-height: 0;
+  align-self: start;
+  border: 1px solid #bbb;
+}
+.dialogue-stage .scene-context {
+  padding: 18px 24px;
+  color: #ddd;
+  margin: 0;
+  max-width: none;
+  font-size: 14px;
+  min-height: 82px;
+}
+.scene-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #dcdcdc;
+}
+.dialogue-stage .dialogue {
+  display: block;
+  padding: 24px;
+  min-height: 145px;
+  margin: 0;
+}
+.dialogue-stage .dialogue p {
+  color: #fff;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.45;
+  text-align: center;
+}
+.scene-next {
+  margin: 0 24px 16px;
+  color: #ddd;
+  font-size: 15px;
+  border: 0;
+  background: transparent;
+}
+.scene-next:hover {
+  background: #444;
+}
+.meaning-card .card-label {
+  margin-bottom: 8px;
+}
+.meaning-card .scratch-instruction {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.scratch-card {
+  position: relative;
+  background: #f1f1f1;
+  min-height: 260px;
+}
+.scratch-answer {
+  padding: 24px;
+}
+.scratch-answer h3 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+.scratch-answer p {
+  font-size: 17px;
+}
+.scratch-answer p:last-child {
+  margin: 0;
+}
+.scratch-translation {
+  color: #555;
+  padding-top: 16px;
+  border-top: 1px solid #bbb;
+}
+.scratch-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+.scratch-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-block: 8px;
+}
+.scratch-actions button {
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font-size: 14px;
+  min-height: 44px;
+}
+.scratch-actions button[aria-disabled="true"] {
+  color: #666;
+  text-decoration: none;
+  cursor: default;
+}
+.practice-section {
+  background: #ededed;
+}
+.practice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+.practice-grid>div>p {
+  margin-top: 24px;
+  color: var(--mid);
+}
+.practice-card {
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #bbb;
+}
+.practice-card blockquote {
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 32px 0 24px;
+  letter-spacing: -.02em;
+}
+.practice-card mark {
+  color: inherit;
+  background: #ddd;
+}
+.practice-card .practice-note {
+  font-size: 16px;
+  border-top: 1px solid #ccc;
+  padding-top: 24px;
+}
+.access-note {
+  font-size: 14px;
+}
+@media(max-width:1000px) {
+  .practice-grid {
+    gap:32px;
+  }
+  .scratch-answer {
+    padding:20px;
+  }
+  .scratch-answer h3 {
+    font-size:26px;
+  }
+  .value-grid {
+    gap:24px;
+  }
+}
+@media(max-width:760px) {
+  .hero-story {
+    padding:0;
+    min-height:0;
+  }
+  .hero-caption p:first-child {
+    font-size:26px;
+  }
+  .hero-caption {
+    min-height:170px;
+  }
+  .value-grid,.practice-grid {
+    grid-template-columns:1fr;
+  }
+  .value-grid {
+    gap:28px;
+  }
+  .value-section {
+    padding-block:56px;
+  }
+  .scene-art {
+    max-height:none;
+  }
+  .dialogue-stage {
+    padding:0;
+  }
+  .dialogue-stage .dialogue {
+    min-height:150px;
+  }
+  .meaning-card {
+    padding:20px;
+  }
+  .scratch-answer {
+    padding:24px;
+  }
+  .scratch-answer h3 {
+    font-size:28px;
+  }
+  .practice-card {
+    padding:24px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .bill {
+    transition:none;
+  }
+}

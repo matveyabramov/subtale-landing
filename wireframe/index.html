@@ -8,7 +8,8 @@
 <link rel="preload" href="./fonts/Inter-variable.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="./wireframe.css">
 <script src="./wireframe.js" defer></script>
-<title>SUBTALE — меньше поиска, больше кино на английском</title>
+<script src="./scratch-off.js" defer></script>
+<title>SUBTALE — кино для удовольствия и практики английского</title>
 </head>
 <body>
 <a class="skip-link" href="#main">Перейти к содержанию</a>
@@ -22,25 +23,28 @@
 <main id="main" tabindex="-1">
 <section class="container hero" aria-labelledby="hero-title">
  <div class="hero-copy">
-  <h1 id="hero-title">Кино на английском.<br><span class="muted">Меньше поиска,<br>больше сюжета.</span></h1>
-  <p class="lead">Короткое пояснение — во время фильма. Разбор интересных реплик — после. Мы создаём SUBTALE для комфортного просмотра в оригинале и практики живого английского.</p>
+  <h1 id="hero-title">Смотреть кино.<br><span class="muted">Понимать живой английский.</span></h1>
+  <p class="lead">Знакомые слова, новые выражения, шутки с двойным смыслом. Мы создаём SUBTALE, чтобы разбираться в них по ходу фильма, возвращаться к интересному после и практиковать английский через любимые истории.</p>
   <a class="button dark hero-cta" href="#demo">Попробовать разбор <span aria-hidden="true">↗</span></a>
  </div>
- <div class="hero-example">
-  <p class="scene-context">Друзья выбирают фильм на вечер.</p>
-  <details class="hero-phrase">
-   <summary id="phrase-toggle" lang="en">I’m still <mark>on the fence</mark></summary>
-   <div class="quick-help" id="phrase-help"><p>«Я пока не определился».</p><span>Здесь речь о выборе, а не о заборе.</span></div>
-  </details>
-  <p class="phrase-instruction">Выражение подчёркнуто — его можно раскрыть.</p>
+ <div class="hero-example hero-story" data-step="0">
+  <div class="hero-setting"><span id="hero-setting">После прогулки друзья заходят в кафе.</span><span id="hero-frame-count" aria-hidden="true">1 / 3</span></div>
+  <div class="cafe-art" aria-hidden="true"><div class="cafe-window"></div><div class="figure figure-left"></div><div class="figure figure-right"></div><div class="cafe-table"></div><div class="cup cup-left"></div><div class="cup cup-right"></div><div class="bill">£</div></div>
+  <div class="hero-caption" aria-live="polite"><p id="hero-line" lang="en">“Shall we get some coffee?”</p><p id="hero-meaning">«Может, выпьем кофе?»</p></div>
+  <div class="story-controls" role="group" aria-label="Кадры диалога в кафе" hidden><button type="button" data-frame="0" aria-pressed="true">Ситуация</button><button type="button" data-frame="1" aria-pressed="false">Реплика</button><button type="button" data-frame="2" aria-pressed="false">Смысл</button></div>
  </div>
+</section>
+
+<section class="section value-section" aria-labelledby="value-title">
+ <div class="container"><div class="section-intro"><h2 id="value-title">Английский —<br><span class="muted">вместе с тем, что происходит</span></h2><p>В фильме выражение связано с человеком, эмоцией и ситуацией. Разбор помогает увидеть эти связи, а не ограничиваться переводом отдельных слов.</p></div>
+ <div class="value-grid"><article><h3>Что сказано</h3><p>Целое выражение: где буквальный перевод подходит, а где уводит в сторону.</p></article><article><h3>Зачем это сказано</h3><p>Намерение героя: пошутить, поддержать, съязвить или сослаться на знакомую историю.</p></article><article><h3>Как сказать самому</h3><p>Другой контекст для той же фразы — чтобы пример не остался привязанным к одной сцене.</p></article></div></div>
 </section>
 
 <section class="section demo-section" id="demo" aria-labelledby="demo-title">
  <div class="container">
   <div class="section-intro">
-   <h2 id="demo-title">Слова знакомые.<br><span class="muted">А смысл — в ситуации.</span></h2>
-   <p>В кино важны и выражения, и интонация, и отсылки. Здесь можно посмотреть, как контекст меняет реплику: сначала короткое пояснение, затем — подробный разбор по желанию.</p>
+   <h2 id="demo-title">Сначала сцена.<br><span class="muted">Потом — маленькое открытие.</span></h2>
+   <p>У каждой сцены свой поворот: идиома, ирония или отсылка. Реплики можно перелистать, а объяснение — открыть, стирая покрытие мышью или пальцем.</p>
   </div>
   <div class="example-tabs" role="tablist" aria-label="Примеры разбора" hidden>
    <button type="button" role="tab" id="tab-idiom" aria-controls="panel-idiom" aria-selected="true" tabindex="0">01 <span>Идиома</span></button>
@@ -48,49 +52,67 @@
    <button type="button" role="tab" id="tab-reference" aria-controls="panel-reference" aria-selected="false" tabindex="-1">03 <span>Отсылка</span></button>
   </div>
   <div class="example-panel" id="panel-idiom" data-example="idiom">
-   <div class="dialogue-stage">
+   <div class="dialogue-stage scene-idiom">
     <p class="scene-context">Первый день в новой команде. За столом неловкое молчание.</p>
-    <div class="dialogue"><p lang="en">“Nobody’s saying a word.”</p><p lang="en">“Let’s <mark>break the ice</mark>. Who wants coffee?”</p></div>
-    <p class="dialogue-translation">«Все молчат».<br>«Давайте разрядим обстановку. Кто хочет кофе?»</p>
+    <svg class="scene-art" viewBox="0 0 640 330" aria-hidden="true"><rect x="52" y="38" width="170" height="105" fill="#eee" stroke="#999"/><path d="M137 38v105M52 91h170" stroke="#aaa"/><rect x="460" y="40" width="120" height="125" fill="#d4d4d4" stroke="#aaa"/><path d="M475 65h80m-80 22h65m-65 22h70" stroke="#999"/><circle cx="215" cy="145" r="27" fill="#929292"/><path d="M166 242v-52q49-40 98 0v52" fill="#aaa"/><circle cx="415" cy="145" r="27" fill="#777"/><path d="M366 242v-52q49-40 98 0v52" fill="#929292"/><path d="M144 230h350v18H144z" fill="#777"/><path d="M165 248v65m305-65v65" stroke="#777" stroke-width="12"/><path d="M290 209h25v20h-25zM325 209h25v20h-25z" fill="#eee" stroke="#666"/></svg>
+    <div class="dialogue" aria-live="polite"><p class="scene-line" lang="en">“Nobody’s saying a word.”</p><p class="scene-line" lang="en">“Let’s <mark>break the ice</mark>. Who wants coffee?”</p></div>
+    <button class="scene-next text-link" type="button" hidden>Ответ героя <span aria-hidden="true">→</span></button>
    </div>
    <div class="meaning-card">
-    <p class="card-label">Смысл реплики</p><h3>Начать общение,<br>снять неловкость</h3>
-    <p>Break the ice — помочь людям почувствовать себя свободнее в начале общения.</p>
-    <details class="explanation"><summary>Почему это значит именно так <span aria-hidden="true">+</span></summary><div><p>Лёд здесь — образ скованности между незнакомыми людьми. Предложение кофе даёт простой повод заговорить.</p><p><b>На что обратить внимание:</b> выражение относится к началу общения. Оно не означает решить любую трудную проблему.</p></div></details>
-    <label class="note-label" for="note-idiom">Своя заметка, если хочется</label><textarea id="note-idiom" rows="2" placeholder="В какой ситуации пригодится выражение?"></textarea>
+    <p class="card-label">В чём смысл реплики?</p>
+    <p class="scratch-instruction" id="scratch-hint-idiom">Сотрите покрытие — под ним объяснение.</p>
+    <div class="scratch-card" data-scratch="idiom">
+     <div class="scratch-answer" id="answer-idiom"><h3>Начать общение,<br>снять неловкость</h3><p>Break the ice — помочь людям почувствовать себя свободнее в начале общения.</p><p class="scratch-translation">«Все молчат».<br>«Давайте разрядим обстановку. Кто хочет кофе?»</p></div>
+     <canvas class="scratch-canvas" aria-hidden="true" hidden></canvas>
+    </div>
+    <div class="scratch-actions"><button class="scratch-reveal text-link" type="button" aria-controls="answer-idiom" aria-expanded="false" hidden>Открыть без стирания</button><button class="scratch-reset text-link" type="button" hidden>Стереть ещё раз</button></div>
+    <p class="scratch-status visually-hidden" role="status" aria-live="polite"></p>
+    <details class="explanation"><summary>Ещё немного контекста <span aria-hidden="true">+</span></summary><div><p>Лёд здесь — образ скованности между незнакомыми людьми. Предложение кофе даёт простой повод заговорить.</p><p><b>На что обратить внимание:</b> выражение относится к началу общения. Оно не означает решить любую трудную проблему.</p></div></details>
     <button class="button save-button" type="button" data-save="idiom" aria-pressed="false" hidden>Оставить на потом <span aria-hidden="true">+</span></button>
    </div>
   </div>
   <div class="example-panel" id="panel-irony" data-example="irony">
-   <div class="dialogue-stage">
+   <div class="dialogue-stage scene-irony">
     <p class="scene-context">Лифт только что закрылся. Друзья с тяжёлыми сумками остались снаружи.</p>
-    <div class="dialogue"><p lang="en">“There goes the lift.”</p><p lang="en">“<mark>Great timing.</mark> Now we get to carry these upstairs.”</p></div>
-    <p class="dialogue-translation">«Лифт ушёл».<br>«Как вовремя. Теперь понесём всё по лестнице».</p>
+    <svg class="scene-art" viewBox="0 0 640 330" aria-hidden="true"><rect x="230" y="28" width="180" height="255" fill="#bbb" stroke="#888"/><path d="M320 28v255" stroke="#888" stroke-width="3"/><rect x="275" y="5" width="90" height="14" fill="#999"/><path d="M40 303h125v-35h25v-35h25v-35" fill="none" stroke="#999" stroke-width="12"/><circle cx="130" cy="147" r="25" fill="#888"/><path d="M90 252v-70q40-30 80 0v70" fill="#aaa"/><circle cx="492" cy="147" r="25" fill="#666"/><path d="M452 252v-70q40-30 80 0v70" fill="#929292"/><path d="M104 252v62m52-62v62m310-62v62m52-62v62" stroke="#777" stroke-width="14"/><rect x="53" y="230" width="42" height="49" fill="#ddd" stroke="#888"/><rect x="532" y="230" width="42" height="49" fill="#ccc" stroke="#888"/></svg>
+    <div class="dialogue" aria-live="polite"><p class="scene-line" lang="en">“There goes the lift.”</p><p class="scene-line" lang="en">“<mark>Great timing.</mark> Now we get to carry these upstairs.”</p></div>
+    <button class="scene-next text-link" type="button" hidden>Ответ героя <span aria-hidden="true">→</span></button>
    </div>
    <div class="meaning-card">
-    <p class="card-label">Смысл реплики</p><h3>«Вовремя» —<br>с иронией</h3>
-    <p>Буквально great timing — «отличный выбор момента». Здесь герой недоволен: они опоздали к лифту.</p>
-    <details class="explanation"><summary>Откуда возникает ирония <span aria-hidden="true">+</span></summary><div><p>Положительная оценка не совпадает с ситуацией: тяжёлые сумки придётся нести самим. Это противоречие и делает реплику ироничной.</p><p><b>Те же слова, другой смысл:</b> если друг успел придержать лифт, great timing могло бы прозвучать как искренняя благодарность.</p></div></details>
-    <label class="note-label" for="note-irony">Своя заметка, если хочется</label><textarea id="note-irony" rows="2" placeholder="Что в ситуации меняет смысл слов?"></textarea>
+    <p class="card-label">В чём смысл реплики?</p>
+    <p class="scratch-instruction" id="scratch-hint-irony">Сотрите покрытие — под ним объяснение.</p>
+    <div class="scratch-card" data-scratch="irony">
+     <div class="scratch-answer" id="answer-irony"><h3>«Вовремя» —<br>с иронией</h3><p>Буквально great timing — «отличный выбор момента». Здесь герой недоволен: они опоздали к лифту.</p><p class="scratch-translation">«Лифт ушёл».<br>«Как вовремя. Теперь понесём всё по лестнице».</p></div>
+     <canvas class="scratch-canvas" aria-hidden="true" hidden></canvas>
+    </div>
+    <div class="scratch-actions"><button class="scratch-reveal text-link" type="button" aria-controls="answer-irony" aria-expanded="false" hidden>Открыть без стирания</button><button class="scratch-reset text-link" type="button" hidden>Стереть ещё раз</button></div>
+    <p class="scratch-status visually-hidden" role="status" aria-live="polite"></p>
+    <details class="explanation"><summary>Ещё немного контекста <span aria-hidden="true">+</span></summary><div><p>Положительная оценка не совпадает с ситуацией: тяжёлые сумки придётся нести самим. Это противоречие и делает реплику ироничной.</p><p><b>Те же слова, другой смысл:</b> если друг успел придержать лифт, great timing могло бы прозвучать как искренняя благодарность.</p></div></details>
     <button class="button save-button" type="button" data-save="irony" aria-pressed="false" hidden>Оставить на потом <span aria-hidden="true">+</span></button>
    </div>
   </div>
   <div class="example-panel" id="panel-reference" data-example="reference">
-   <div class="dialogue-stage">
+   <div class="dialogue-stage scene-reference">
     <p class="scene-context">В офисе пропал торт. Сэм замечает крошки на столе коллеги.</p>
-    <div class="dialogue"><p lang="en">“The crumbs lead straight to Tom’s desk.”</p><p lang="en">“All right, <mark>Sherlock</mark>. Mystery solved.”</p></div>
-    <p class="dialogue-translation">«Крошки ведут прямо к столу Тома».<br>«Ладно, Шерлок. Загадка раскрыта».</p>
+    <svg class="scene-art" viewBox="0 0 640 330" aria-hidden="true"><rect x="50" y="40" width="150" height="110" fill="#eee" stroke="#999"/><path d="M125 40v110M50 95h150" stroke="#aaa"/><circle cx="225" cy="145" r="26" fill="#888"/><path d="M182 242v-61q43-30 86 0v61" fill="#aaa"/><circle cx="425" cy="145" r="26" fill="#666"/><path d="M382 242v-61q43-30 86 0v61" fill="#929292"/><path d="M145 236h365v17H145z" fill="#777"/><path d="M168 253v60m315-60v60" stroke="#777" stroke-width="12"/><ellipse cx="350" cy="226" rx="34" ry="7" fill="#eee"/><path d="M337 216l27-15v20z" fill="#b1b1b1" stroke="#666"/><path d="M301 224h4m-17-2h3m-17-3h3m-17-4h3" stroke="#555" stroke-width="4"/></svg>
+    <div class="dialogue" aria-live="polite"><p class="scene-line" lang="en">“The crumbs lead straight to Tom’s desk.”</p><p class="scene-line" lang="en">“All right, <mark>Sherlock</mark>. Mystery solved.”</p></div>
+    <button class="scene-next text-link" type="button" hidden>Ответ героя <span aria-hidden="true">→</span></button>
    </div>
    <div class="meaning-card">
-    <p class="card-label">Смысл реплики</p><h3>Имя стало<br>сравнением</h3>
-    <p>Сэма называют Шерлоком, сравнивая с детективом Шерлоком Холмсом. Это не настоящее имя героя.</p>
-    <details class="explanation"><summary>Что добавляет отсылка <span aria-hidden="true">+</span></summary><div><p>Шерлок Холмс известен умением раскрывать загадки по деталям. В этом диалоге его имя превращает обычное наблюдение в маленькое «расследование».</p><p><b>Возможный оттенок:</b> находка довольно очевидна, поэтому сравнение можно прочитать как дружескую подколку. Окончательный тон зависел бы от подачи актёров.</p></div></details>
-    <label class="note-label" for="note-reference">Своя заметка, если хочется</label><textarea id="note-reference" rows="2" placeholder="Какую связь создаёт эта отсылка?"></textarea>
+    <p class="card-label">В чём смысл реплики?</p>
+    <p class="scratch-instruction" id="scratch-hint-reference">Сотрите покрытие — под ним объяснение.</p>
+    <div class="scratch-card" data-scratch="reference">
+     <div class="scratch-answer" id="answer-reference"><h3>Имя стало<br>сравнением</h3><p>Сэма называют Шерлоком, сравнивая с детективом Шерлоком Холмсом. Это не настоящее имя героя.</p><p class="scratch-translation">«Крошки ведут прямо к столу Тома».<br>«Ладно, Шерлок. Загадка раскрыта».</p></div>
+     <canvas class="scratch-canvas" aria-hidden="true" hidden></canvas>
+    </div>
+    <div class="scratch-actions"><button class="scratch-reveal text-link" type="button" aria-controls="answer-reference" aria-expanded="false" hidden>Открыть без стирания</button><button class="scratch-reset text-link" type="button" hidden>Стереть ещё раз</button></div>
+    <p class="scratch-status visually-hidden" role="status" aria-live="polite"></p>
+    <details class="explanation"><summary>Ещё немного контекста <span aria-hidden="true">+</span></summary><div><p>Шерлок Холмс известен умением раскрывать загадки по деталям. В этом диалоге его имя превращает обычное наблюдение в маленькое «расследование».</p><p><b>Возможный оттенок:</b> находка довольно очевидна, поэтому сравнение можно прочитать как дружескую подколку. Окончательный тон зависел бы от подачи актёров.</p></div></details>
     <button class="button save-button" type="button" data-save="reference" aria-pressed="false" hidden>Оставить на потом <span aria-hidden="true">+</span></button>
    </div>
   </div>
   <div class="saved-moments" hidden>
-   <div><h3>После просмотра</h3><p>Выбранные реплики и заметки остаются под рукой, пока открыта эта страница.</p></div>
+   <div><h3>После просмотра</h3><p>Выбранные реплики остаются под рукой, пока открыта эта страница.</p></div>
    <div class="saved-content"><p id="saved-empty">Пока ничего не выбрано. Любой пример можно оставить на потом.</p><ul id="saved-list" aria-label="Выбранные реплики"></ul><p id="save-status" class="visually-hidden" role="status" aria-live="polite"></p></div>
   </div>
  </div>
@@ -107,20 +129,24 @@
  </div>
 </section>
 
+<section class="section practice-section" id="practice" aria-labelledby="practice-title">
+ <div class="container practice-grid"><div><h2 id="practice-title">Из сцены —<br><span class="muted">в свой английский</span></h2><p>Понять реплику — первый шаг. После просмотра можно задержаться на выражении: вспомнить ситуацию и примерить его к другому разговору.</p></div><div class="practice-card"><p class="card-label">То же выражение, другой разговор</p><blockquote lang="en">“A simple question can <mark>break the ice</mark>.”</blockquote><p>«Простой вопрос может помочь начать общение».</p><p class="practice-note">На встрече с новыми людьми, в начале созвона, на первом занятии: меняется ситуация, а смысл выражения остаётся.</p><a class="text-link" href="#demo">Вернуться к сцене <span aria-hidden="true">↑</span></a></div></div>
+</section>
+
 <section class="section faq-section" id="faq" aria-labelledby="faq-title">
  <div class="container faq-grid">
-  <div><h2 id="faq-title">О формате<br><span class="muted">и доступе</span></h2><p>Что уже можно попробовать и что ещё предстоит сделать.</p></div>
+  <div><h2 id="faq-title">Просмотр<br><span class="muted">в своём темпе</span></h2><p>О языке, разборе и том, как совместить их с удовольствием от фильма.</p></div>
   <div class="faq-list">
-   <details><summary>Что доступно прямо сейчас? <span aria-hidden="true">+</span></summary><p>Три разбора на этой странице: можно переключаться между диалогами, раскрывать объяснения, оставлять заметки и собирать реплики на потом. Выбор и заметки сохраняются только до перезагрузки страницы. Сам сервис для просмотра кино ещё создаётся.</p></details>
-   <details><summary>На каких платформах будет работать SUBTALE? <span aria-hidden="true">+</span></summary><p>Формат воспроизведения и совместимость со сторонними видеосервисами ещё не определены. Поддержку конкретных платформ и устройств пока не обещаем.</p></details>
-   <details><summary>Подойдёт ли это с моим уровнем английского? <span aria-hidden="true">+</span></summary><p>Попробуйте диалоги выше: у каждого есть перевод и объяснение. Они помогут оценить сам подход. Минимальный уровень для полноценного просмотра ещё предстоит проверить; SUBTALE не заменяет систематическое обучение и разговорную практику.</p></details>
-   <details><summary>Когда запуск и сколько будет стоить? <span aria-hidden="true">+</span></summary><p>Дата запуска и стоимость пока не определены. Сейчас открыт интерактивный разбор на этой странице — без регистрации.</p></details>
+   <details><summary>Нужно разбирать каждую реплику? <span aria-hidden="true">+</span></summary><p>Нет. Смысл такого подхода — помогать там, где возник вопрос, а не превращать весь фильм в задание. Интересное можно оставить на потом; объяснение на странице доступно и без стирания.</p></details>
+   <details><summary>Если мне пока трудно смотреть в оригинале? <span aria-hidden="true">+</span></summary><p>Начните с короткой сцены или знакомой истории. В примерах выше есть перевод и контекст. Они помогут оценить сам способ разбора; универсальный языковой уровень для полноценного просмотра мы пока не определили.</p></details>
+   <details><summary>Чем это отличается от перевода? <span aria-hidden="true">+</span></summary><p>Здесь выражение связано с ситуацией: кто говорит, что происходит и зачем выбраны эти слова. Перевод помогает понять содержание, а контекст — увидеть шутку, намерение или отсылку. Другие инструменты тоже могут давать такие объяснения.</p></details>
+   <details><summary>Это может заменить занятия английским? <span aria-hidden="true">+</span></summary><p>Кино даёт материал для языковой практики. Но понимание реплик само по себе не заменяет разговор, обратную связь и систематическую работу с языком.</p></details>
   </div>
  </div>
 </section>
 
 <section class="section final-section" id="action" aria-labelledby="action-title">
- <div class="container final-grid"><h2 id="action-title">Любимый сюжет.<br><span class="muted">Живой английский.</span></h2><div><p>Понимать, почему герой сказал именно так, — ещё одна причина смотреть в оригинале. Начать можно с одной реплики.</p><a class="text-link" href="#demo" id="another-example">Выбрать пример для разбора <span aria-hidden="true">↑</span></a></div></div>
+ <div class="container final-grid"><h2 id="action-title">Любимый сюжет.<br><span class="muted">Живой английский.</span></h2><div><p>Одна сцена — новое выражение в знакомой ситуации. Здесь уже можно перелистать диалог, стереть покрытие и выбрать реплику для возвращения.</p><p class="access-note">Сейчас доступен интерактивный разбор на странице. Полноценный просмотр с SUBTALE ещё создаётся.</p><a class="text-link" href="#demo" id="another-example">Выбрать пример для разбора <span aria-hidden="true">↑</span></a></div></div>
 </section>
 </main>
 <footer class="container footer"><a class="logo" href="#top" aria-label="SUBTALE — наверх">subtale*</a><a href="#top">Наверх ↑</a></footer>

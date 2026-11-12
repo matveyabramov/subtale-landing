@@ -1,5 +1,35 @@
 (() => {
   'use strict';
+  const frames = [
+    { setting: 'После прогулки друзья заходят в кафе.', line: '“Shall we get some coffee?”', meaning: '«Может, выпьем кофе?»' },
+    { setting: 'Один из друзей берёт счёт.', line: '“Sure. It’s on me.”', meaning: 'Знакомые слова. Какой смысл у целой фразы?' },
+    { setting: 'Он предлагает заплатить за обоих.', line: '“It’s on me.”', meaning: '«Я угощаю». Так можно предложить оплатить кофе или обед.' }
+  ];
+  const story = document.querySelector('.hero-story');
+  const frameButtons = [...document.querySelectorAll('[data-frame]')];
+  frameButtons.forEach(button => button.addEventListener('click', () => {
+    const index = Number(button.dataset.frame);
+    story.dataset.step = String(index);
+    document.querySelector('#hero-setting').textContent = frames[index].setting;
+    document.querySelector('#hero-frame-count').textContent = `${index + 1} / 3`;
+    document.querySelector('#hero-line').textContent = frames[index].line;
+    document.querySelector('#hero-meaning').textContent = frames[index].meaning;
+    frameButtons.forEach((item, i) => item.setAttribute('aria-pressed', String(index === i)));
+  }));
+  document.querySelector('.story-controls').hidden = false;
+  document.querySelectorAll('.dialogue-stage').forEach(stage => {
+    const lines = [...stage.querySelectorAll('.scene-line')];
+    const next = stage.querySelector('.scene-next');
+    let current = 0;
+    function showLine() {
+      lines.forEach((line, index) => { line.hidden = current !== index; });
+      stage.dataset.line = String(current);
+      next.replaceChildren(document.createTextNode(current ? 'К началу диалога ↶' : 'Ответ героя →'));
+    }
+    showLine();
+    next.hidden = false;
+    next.addEventListener('click', () => { current = 1 - current; showLine(); });
+  });
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   const panels = [...document.querySelectorAll('.example-panel')];
   function selectExample(id, focusTab = false) {
