@@ -127,7 +127,7 @@
       canvas.hidden = false;
       revealButton.setAttribute('aria-expanded', 'false');
       revealButton.removeAttribute('aria-disabled');
-      revealButton.textContent = 'Открыть без стирания';
+      revealButton.textContent = 'Показать объяснение';
       resetButton.hidden = true;
       paint();
       revealButton.focus();

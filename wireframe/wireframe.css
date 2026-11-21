@@ -1212,3 +1212,97 @@ textarea: :placeholder {
     padding:24px;
   }
 }
+
+/* Beta landing: approved offer, static product preview and one shared form. */
+html { scrollbar-gutter: stable; }
+.hero { grid-template-columns: minmax(0,1.08fr) minmax(0,1fr); gap: 56px; }
+.hero-copy h1 { font-size: clamp(44px,4.3vw,62px); line-height: 1.07; }
+.hero-description { margin-block: 32px; }
+.hero-description p { color: var(--mid); font-size: 18px; line-height: 1.55; }
+.hero-description strong { color: var(--ink); font-weight: 600; }
+.hero-description p:last-child { margin-bottom: 0; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+.hero-actions .text-link { font-size: 15px; }
+.hero-mockup { margin: 0; border: 1px solid #aaa; background: #eaeaea; min-width: 0; }
+.mockup-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid #bbb; font-size: 13px; color: #555; }
+.mockup-heading span:first-child { font-size: 22px; color: var(--ink); font-weight: 700; letter-spacing: -.06em; }
+.hero-mockup .hero-caption { min-height: 0; }
+.hero-mockup .hero-caption p { font-size: 34px; margin: 0; color: #fff; }
+.mockup-explanation { padding: 24px; background: #fff; }
+.mockup-explanation .card-label { margin-bottom: 12px; }
+.mockup-explanation h3 { margin-bottom: 16px; }
+.mockup-explanation p:not(.card-label) { font-size: 17px; color: var(--mid); }
+.mock-action { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 20px; border: 1px solid #aaa; font-size: 16px; }
+.dialogue-stage .dialogue .scene-lead-in { color: #bbb; font-size: 19px; margin-bottom: 20px; }
+.meaning-card .card-label { color: var(--ink); font-size: 18px; line-height: 1.4; }
+.scratch-actions { margin-block: 16px 0; align-items: center; }
+.scratch-actions .scratch-reveal { padding: 14px 20px; min-height: 52px; border: 1px solid var(--ink); font-size: 15px; text-align: center; }
+.scratch-actions .scratch-reveal[aria-disabled="true"] { background: #ddd; color: #444; border-color: #aaa; }
+.scratch-actions .scratch-reveal:focus-visible { outline-color: var(--ink); }
+.viewing-options { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.viewing-options article { border: 1px solid #aaa; padding: 32px; }
+.viewing-options h3 { font-size: 30px; margin-bottom: 20px; }
+.viewing-options p { color: var(--mid); margin: 0; }
+.practice-flow { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 48px; }
+.practice-heading { max-width: 900px; margin-bottom: 32px; }
+.practice-heading h3 { font-size: clamp(30px,3vw,42px); }
+.practice-heading p { color: var(--mid); margin: 20px 0 0; }
+.practice-flow .practice-grid { gap: 24px; }
+.practice-flow .practice-card { background: #f5f5f5; }
+.practice-card h4 { font-size: 32px; line-height: 1.2; font-weight: 400; letter-spacing: -.025em; margin: 0 0 20px; }
+.practice-card .card-label { font-size: 14px; }
+.practice-card .text-link { font-size: 15px; }
+.practice-prompt p { color: var(--mid); }
+.practice-prompt summary { font-size: 16px; }
+.practice-prompt blockquote { margin-block: 16px; font-size: 26px; }
+.signup-form { width: min(560px,calc(100% - 32px)); margin: 40px auto; padding: 32px; border: 1px solid var(--ink); background: #fff; }
+.signup-dialog { width: min(560px,calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 32px); padding: 0; border: 1px solid var(--ink); color: var(--ink); background: #fff; overflow-y: auto; }
+.signup-dialog::backdrop { background: rgb(0 0 0 / .5); }
+.signup-dialog .signup-form { width: auto; margin: 0; border: 0; }
+.signup-close { display: flex; margin: -12px 0 16px auto; border: 0; background: transparent; padding: 8px; font-size: 14px; min-height: 44px; }
+.signup-close span { font-size: 26px; }
+.signup-form h2 { font-size: 40px; margin-bottom: 20px; }
+.signup-form p { font-size: 16px; }
+.form-label { font-size: 13px!important; text-transform: uppercase; letter-spacing: .08em; color: var(--mid); }
+.demo-notice { background: #eee; padding: 16px; }
+.signup-form label { display: block; font-size: 16px; margin-bottom: 8px; }
+.signup-form input { width: 100%; min-height: 50px; border: 1px solid #999; border-radius: 0; padding: 12px; font: inherit; font-size: 16px; margin-bottom: 24px; color: var(--ink); background: #fff; }
+input:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.signup-form [type="submit"] { width: 100%; }
+.signup-form [type="submit"]:disabled { opacity: .6; cursor: default; }
+.form-status { margin: 20px 0 0; }
+.form-status:empty { margin: 0; }
+body.modal-open { overflow: hidden; }
+#demo-title:focus { outline: 0; }
+@media(max-width:1100px) {
+ .hero { gap: 32px; }
+ .hero-actions .button { padding-inline: 20px; }
+}
+@media(max-width:760px) {
+ .hero { grid-template-columns: 1fr; gap: 40px; }
+ .hero-copy h1 { font-size: clamp(36px,8vw,50px); }
+ .hero-description { margin-block: 24px; }
+ .hero-description p { font-size: 17px; }
+ .hero-actions { gap: 12px; }
+ .hero-actions .button { width: 100%; }
+ .header-cta { font-size: 12px; padding-inline: 12px; }
+ .header .logo { font-size: 26px; }
+ .viewing-options { grid-template-columns: 1fr; gap: 16px; }
+ .viewing-options article { padding: 24px; }
+ .viewing-options h3 { font-size: 27px; }
+ .practice-flow { margin-top: 40px; padding-top: 32px; }
+ .practice-flow .practice-grid { grid-template-columns: 1fr; gap: 16px; }
+ .practice-card h4 { font-size: 28px; }
+ .signup-form { padding: 24px; }
+ .signup-form h2 { font-size: 34px; }
+ .signup-form p { font-size: 15px; }
+ .signup-dialog { max-height: calc(100dvh - 24px); }
+ .final-grid .button { width: 100%; }
+}
+@media(max-width:360px) {
+ .header-inner { column-gap: 8px; }
+ .header-cta { font-size: 11px; padding-inline: 9px; }
+ .header .logo { font-size: 24px; }
+ .hero-copy h1 { font-size: 34px; }
+ .mockup-explanation { padding: 20px; }
+}
