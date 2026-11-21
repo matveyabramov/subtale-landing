@@ -17,21 +17,34 @@
  <div class="container header-inner">
   <a class="logo" href="#top" aria-label="SUBTALE — наверх">subtale*</a>
   <nav aria-label="Навигация"><a href="#demo">Примеры</a><a href="#how">Как смотреть</a><a href="#faq">Вопросы</a></nav>
-  <a class="button dark header-cta" href="#demo" hidden>Открыть разбор <span aria-hidden="true">↗</span></a>
+  <a class="button dark header-cta" href="#demo" hidden>Ещё примеры <span aria-hidden="true">↓</span></a>
  </div>
 </header>
 <main id="main" tabindex="-1">
 <section class="container hero" aria-labelledby="hero-title">
  <div class="hero-copy">
-  <h1 id="hero-title">Смотреть кино.<br><span class="muted">Понимать живой английский.</span></h1>
-  <p class="lead">Знакомые слова, новые выражения, шутки с двойным смыслом. Мы создаём SUBTALE, чтобы разбираться в них по ходу фильма, возвращаться к интересному после и практиковать английский через любимые истории.</p>
-  <a class="button dark hero-cta" href="#demo">Попробовать разбор <span aria-hidden="true">↗</span></a>
+  <h1 id="hero-title">Разобраться в реплике.<br><span class="muted">Вернуться к ней для практики</span></h1>
+  <p class="lead">SUBTALE помогает понять выражение по ходу фильма на английском, а после просмотра — вспомнить сцену и попробовать фразу в другом разговоре.</p>
+  <a class="button dark hero-cta" href="#hero-meaning-toggle">Разобрать «It’s on me» <span aria-hidden="true">↗</span></a>
  </div>
- <div class="hero-example hero-story" data-step="0">
-  <div class="hero-setting"><span id="hero-setting">После прогулки друзья заходят в кафе.</span><span id="hero-frame-count" aria-hidden="true">1 / 3</span></div>
+ <div class="hero-example hero-story" id="hero-demo">
+  <div class="hero-setting">Друзья пьют кофе в кафе. Приносят счёт, и один из них говорит:</div>
   <div class="cafe-art" aria-hidden="true"><div class="cafe-window"></div><div class="figure figure-left"></div><div class="figure figure-right"></div><div class="cafe-table"></div><div class="cup cup-left"></div><div class="cup cup-right"></div><div class="bill">£</div></div>
-  <div class="hero-caption" aria-live="polite"><p id="hero-line" lang="en">“Shall we get some coffee?”</p><p id="hero-meaning">«Может, выпьем кофе?»</p></div>
-  <div class="story-controls" role="group" aria-label="Кадры диалога в кафе" hidden><button type="button" data-frame="0" aria-pressed="true">Ситуация</button><button type="button" data-frame="1" aria-pressed="false">Реплика</button><button type="button" data-frame="2" aria-pressed="false">Смысл</button></div>
+  <div class="hero-caption"><p lang="en">“It’s on me.”</p><p>Что он имеет в виду?</p></div>
+  <details class="hero-breakdown" id="hero-breakdown">
+   <summary id="hero-meaning-toggle">Показать смысл реплики <span aria-hidden="true">+</span></summary>
+   <div class="hero-answer">
+    <h3>«Я угощаю»</h3><p>Герой предлагает заплатить за обоих. Так говорят, когда берут расходы на себя: например, угощают друга кофе или обедом.</p>
+    <button class="button save-button" type="button" data-save="cafe" aria-pressed="false" hidden>Сохранить для практики <span aria-hidden="true">+</span></button>
+    <a class="text-link hero-saved-link" href="#saved-moments" hidden>К сохранённым репликам <span aria-hidden="true">↓</span></a>
+    <details class="hero-practice" id="hero-practice">
+     <summary id="hero-practice-toggle">Попрактиковаться с фразой <span aria-hidden="true">+</span></summary>
+     <p>Теперь вы с другом собираетесь пообедать. Как предложить заплатить за него? Скажите свою фразу вслух.</p>
+     <details id="hero-practice-answer"><summary>Показать вариант ответа <span aria-hidden="true">+</span></summary><p lang="en">“Let’s get lunch. It’s on me.”</p><p>«Давай пообедаем. Я угощаю».</p></details>
+    </details>
+   </div>
+  </details>
+  <a class="text-link hero-more" href="#demo">Ещё 3 примера разбора <span aria-hidden="true">↓</span></a>
  </div>
 </section>
 
@@ -43,8 +56,8 @@
 <section class="section demo-section" id="demo" aria-labelledby="demo-title">
  <div class="container">
   <div class="section-intro">
-   <h2 id="demo-title">Сначала сцена.<br><span class="muted">Потом — маленькое открытие.</span></h2>
-   <p>У каждой сцены свой поворот: идиома, ирония или отсылка. Реплики можно перелистать, а объяснение — открыть, стирая покрытие мышью или пальцем.</p>
+   <h2 id="demo-title">Ещё три сцены.<br><span class="muted">Три повода разобраться.</span></h2>
+   <p>После «It’s on me» попробуйте идиому, иронию и отсылку. В каждом примере можно открыть ответ героя, узнать смысл реплики и оставить её на потом. Объяснение открывается кнопкой или стиранием покрытия.</p>
   </div>
   <div class="example-tabs" role="tablist" aria-label="Примеры разбора" hidden>
    <button type="button" role="tab" id="tab-idiom" aria-controls="panel-idiom" aria-selected="true" tabindex="0">01 <span>Идиома</span></button>
@@ -111,7 +124,7 @@
     <button class="button save-button" type="button" data-save="reference" aria-pressed="false" hidden>Оставить на потом <span aria-hidden="true">+</span></button>
    </div>
   </div>
-  <div class="saved-moments" hidden>
+  <div class="saved-moments" id="saved-moments" hidden>
    <div><h3>После просмотра</h3><p>Выбранные реплики остаются под рукой, пока открыта эта страница.</p></div>
    <div class="saved-content"><p id="saved-empty">Пока ничего не выбрано. Любой пример можно оставить на потом.</p><ul id="saved-list" aria-label="Выбранные реплики"></ul><p id="save-status" class="visually-hidden" role="status" aria-live="polite"></p></div>
   </div>

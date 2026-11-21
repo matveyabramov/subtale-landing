@@ -1,22 +1,22 @@
 (() => {
   'use strict';
-  const frames = [
-    { setting: 'После прогулки друзья заходят в кафе.', line: '“Shall we get some coffee?”', meaning: '«Может, выпьем кофе?»' },
-    { setting: 'Один из друзей берёт счёт.', line: '“Sure. It’s on me.”', meaning: 'Знакомые слова. Какой смысл у целой фразы?' },
-    { setting: 'Он предлагает заплатить за обоих.', line: '“It’s on me.”', meaning: '«Я угощаю». Так можно предложить оплатить кофе или обед.' }
-  ];
-  const story = document.querySelector('.hero-story');
-  const frameButtons = [...document.querySelectorAll('[data-frame]')];
-  frameButtons.forEach(button => button.addEventListener('click', () => {
-    const index = Number(button.dataset.frame);
-    story.dataset.step = String(index);
-    document.querySelector('#hero-setting').textContent = frames[index].setting;
-    document.querySelector('#hero-frame-count').textContent = `${index + 1} / 3`;
-    document.querySelector('#hero-line').textContent = frames[index].line;
-    document.querySelector('#hero-meaning').textContent = frames[index].meaning;
-    frameButtons.forEach((item, i) => item.setAttribute('aria-pressed', String(index === i)));
-  }));
-  document.querySelector('.story-controls').hidden = false;
+  const heroBreakdown = document.querySelector('#hero-breakdown');
+  function openHero(practice = false) {
+    heroBreakdown.open = true;
+    if (practice) {
+      document.querySelector('#hero-practice').open = true;
+      document.querySelector('#hero-practice-answer').open = false;
+    }
+    const target = document.querySelector(practice ? '#hero-practice-toggle' : '#hero-meaning-toggle');
+    target.focus({ preventScroll: true });
+    // Immediate, user-initiated reveal: the first click never waits for a scroll or animation.
+    const content = practice ? document.querySelector('#hero-practice') : heroBreakdown;
+    content.scrollIntoView({ block: 'nearest', behavior: 'instant' });
+  }
+  document.querySelector('.hero-cta').addEventListener('click', event => {
+    event.preventDefault();
+    openHero();
+  });
   document.querySelectorAll('.dialogue-stage').forEach(stage => {
     const lines = [...stage.querySelectorAll('.scene-line')];
     const next = stage.querySelector('.scene-next');
@@ -63,7 +63,7 @@
   document.querySelector('.example-tabs').hidden = false;
 
   // Only this page's sample dialogues are saved, in memory. No product backend is implied.
-  const titles = { idiom: 'Break the ice', irony: 'Great timing', reference: 'Sherlock' };
+  const titles = { cafe: 'It’s on me', idiom: 'Break the ice', irony: 'Great timing', reference: 'Sherlock' };
   const saved = new Set();
   const list = document.querySelector('#saved-list');
   const status = document.querySelector('#save-status');
@@ -75,9 +75,13 @@
       const open = document.createElement('button');
       open.type = 'button';
       open.className = 'saved-open';
-      open.textContent = `${titles[id]} ↗`;
-      open.setAttribute('aria-label', `Открыть разбор ${titles[id]}`);
+      open.textContent = id === 'cafe' ? `${titles[id]} — практика ↗` : `${titles[id]} ↗`;
+      open.setAttribute('aria-label', id === 'cafe' ? `Попрактиковаться с фразой ${titles[id]}` : `Открыть разбор ${titles[id]}`);
       open.addEventListener('click', () => {
+        if (id === 'cafe') {
+          openHero(true);
+          return;
+        }
         selectExample(id, true);
         document.querySelector('.example-tabs').scrollIntoView({ block: 'start' });
       });
@@ -97,12 +101,14 @@
     document.querySelectorAll('[data-save]').forEach(button => {
       const active = saved.has(button.dataset.save);
       button.setAttribute('aria-pressed', String(active));
-      button.replaceChildren(document.createTextNode(active ? 'Убрать из выбранного' : 'Оставить на потом'));
+      const label = button.dataset.save === 'cafe' ? 'Сохранить для практики' : 'Оставить на потом';
+      button.replaceChildren(document.createTextNode(active ? 'Убрать из выбранного' : label));
       const icon = document.createElement('span');
       icon.setAttribute('aria-hidden', 'true');
       icon.textContent = active ? '−' : '+';
       button.append(icon);
     });
+    document.querySelector('.hero-saved-link').hidden = !saved.has('cafe');
   }
   function toggleSave(id) {
     if (saved.has(id)) saved.delete(id); else saved.add(id);
@@ -115,7 +121,7 @@
   });
   document.querySelector('.saved-moments').hidden = false;
 
-  // A single primary action on the first screen; continue it in the header after scrolling.
+  // Offer more examples in the header after the Hero action scrolls away.
   const headerAction = document.querySelector('.header-cta');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(([entry]) => {

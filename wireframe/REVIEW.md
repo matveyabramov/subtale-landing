@@ -86,3 +86,22 @@ The new language-practice section shows break the ice in a different sentence; i
 Validation: installed headless Chrome, 1440/768/390/320 px; mouse erasing on desktop and real Chrome DevTools touch start/move/end events at mobile widths, including DPR 2. Measured partially cleared pixel fractions (about 23%, 9%, 12%, 7%) before full reveal; verified this was partial transparency, not a text toggle. Checked threshold completion, reset to opaque, keyboard Enter/Space alternative, hidden-answer accessibility state, preserved erasure after width change and tab switch, independent examples, hero frames, next-line controls, tabs, saved examples, sticky CTA, keyboard FAQ and anchor targets. No page/text overflow or console/resource errors. No-JS and null-canvas fallbacks passed. JS syntax and git diff --check passed; desktop/mobile screenshots and partial-erasure screenshots inspected. Tests use emulated touch/viewports, not physical phones or a screen reader. Safari/Firefox remain untested.
 
 Gridnev's scratch suggestion at 45:59–47:31 is now implemented literally, without importing his speculative neuroscience explanation as product evidence. Content and UI were reviewed through the installed editorial skills; Humanizer was not invoked.
+
+## Hero and first-click review — 2026-11-21
+
+Scope: the user's current request authorizes implementing the Hero copy and interaction directly in `main`. This supersedes the earlier copy-proposal approval gate for this iteration only. Existing section order, monochrome illustrations and the three examples remain in place. Russian Editorial was used for the offer and demonstration; Sasha for action labels. No Slot Machine or Humanizer pass was needed.
+
+Observed before editing in installed Chrome at 1440 and 390 px: the Hero's “Попробовать разбор” scrolls smoothly to `#demo`, where the first visible line is “Nobody’s saying a word.” The cafe storyboard is independent. There is no autoplay: only the bill has a 250 ms transform transition after a frame click. The CTA does not focus a demo control. This makes the two apparent entry points lead to different material.
+
+Two first-click hypotheses were compared by walking their interaction paths, not through a user study:
+
+| Scenario | Path to the meaning | Decision |
+|---|---|---|
+| Keep the three frames with explicit labels | Browser-only labels: “1. Посмотреть ситуацию”, “2. Услышать ответ”, “3. Узнать смысл”. The ordered path needs two clicks after the opening frame; clicking meaning directly skips the target phrase. | Clearer labels help, but the introductory coffee question still delays the useful example. |
+| Start with “It’s on me” | Context and target phrase are present initially; one click opens the explanation. | Implemented. The introductory situation fits in the scene caption. |
+
+Hero now leads with understanding a line and returning for practice. Its named CTA and native “Показать смысл реплики” disclosure reach the same explanation. Opening the CTA moves keyboard focus to that disclosure and uses immediate nearest scrolling, preserving the scene when it fits. There are no timed steps or Hero animation. Without JavaScript the CTA jumps to the native disclosure, which the visitor opens normally.
+
+The cafe phrase can be saved to the existing page-memory collection. Its collection entry opens an optional practice prompt about lunch; the answer starts closed on each return. Saving does not persist across reloads. “Ещё 3 примера разбора” and the revised example introduction connect the Hero to the existing idiom, irony and reference scenes. The sticky action is explicitly “Ещё примеры”. Full viewing, automatic explanations and a product backend remain unimplemented.
+
+Validation: installed headless Chrome, 1440×1000 desktop and 390×844 with iPhone touch/viewport emulation. Walked fresh Hero CTA and native disclosure; save, collection, practice, answer, return with answer reset, un-save; all three example tabs, next lines, reveal/reset, save and saved-item reopening. Checked tab arrow wrapping/End, keyboard Enter/Space on Hero and every FAQ, visible focus outlines, reduced motion and no-JS fallback. No horizontal/text overflow or browser script/console/resource errors. Desktop/mobile initial, revealed and practice screenshots inspected. JS syntax and `git diff --check` passed. This is functional/editorial verification, not evidence of improved conversion; physical devices, Safari and screen-reader output were not tested.
