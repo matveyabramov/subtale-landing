@@ -1306,3 +1306,49 @@ body.modal-open { overflow: hidden; }
  .hero-copy h1 { font-size: 34px; }
  .mockup-explanation { padding: 20px; }
 }
+
+/* Viewing context and an optional interpretation before the same scene explanation. */
+.scratch-actions { margin-block: 16px; }
+.watch-mockup .mockup-heading span:last-child { font-size: 15px; color: var(--ink); }
+.watch-frame { position: relative; background: #252525; }
+.watch-frame .scene-art { aspect-ratio: 640 / 330; }
+.watch-subtitle { position: absolute; inset: auto 0 0; margin: 0; padding: 16px 24px; background: rgb(0 0 0 / .82); color: #fff; text-align: center; font-size: 29px; }
+.watch-transport { padding: 20px 24px 16px; background: #242424; color: #eee; }
+.watch-timeline { position: relative; height: 6px; background: #777; margin-block: 8px 20px; }
+.watch-progress { position: absolute; inset: 0 auto 0 0; width: 56%; background: #eee; }
+.watch-marker { position: absolute; left: 56%; top: -10px; color: #fff; font-size: 31px; line-height: 1; transform: translateX(-50%); text-shadow: 0 1px 2px #000; }
+.watch-state { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; line-height: 1.5; }
+.watch-state>span { display: flex; align-items: center; gap: 8px; }
+.watch-state>span:last-child { text-align: right; }
+.watch-mockup .mockup-explanation h3 { font-size: 26px; }
+.watch-mockup .mockup-explanation p:last-child { margin: 0; }
+.interpretation-choice { min-width: 0; margin: 12px 0 20px; padding: 0; border: 0; }
+.interpretation-choice legend { font-size: 16px; margin-bottom: 10px; padding: 0; }
+.interpretation-choice legend span { color: var(--mid); }
+.interpretation-choice>p { font-size: 14px; color: var(--mid); margin-bottom: 14px; }
+.interpretation-choice label { display: flex; align-items: flex-start; gap: 12px; padding: 14px; border: 1px solid #aaa; margin-bottom: 8px; cursor: pointer; font-size: 16px; line-height: 1.5; }
+.interpretation-choice label:has(input:checked) { border-color: var(--ink); background: #eee; }
+.interpretation-choice input { flex: none; width: 18px; height: 18px; margin: 3px 0 0; accent-color: var(--ink); }
+.interpretation-choice label:focus-within { outline: 3px solid var(--ink); outline-offset: 3px; }
+.interpretation-feedback { padding: 16px; margin-bottom: 20px; border-left: 3px solid var(--ink); background: #eee; font-size: 16px; line-height: 1.5; }
+.phase-title,.practice-heading .phase-title { font-size: 23px; margin-bottom: 24px; letter-spacing: -.02em; }
+.viewing-options h4 { font-size: 28px; line-height: 1.2; font-weight: 400; letter-spacing: -.03em; margin: 0 0 20px; }
+.after-viewing-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 32px; list-style: none; padding: 0; margin: 0 0 36px; counter-reset: review; }
+.after-viewing-steps li { border-top: 1px solid #aaa; padding-top: 20px; counter-increment: review; }
+.after-viewing-steps li::before { content: counter(review,decimal-leading-zero); font-size: 13px; color: var(--mid); display: block; margin-bottom: 16px; }
+.after-viewing-steps h4 { font-size: 23px; font-weight: 400; line-height: 1.25; letter-spacing: -.02em; margin: 0 0 16px; }
+.after-viewing-steps p { font-size: 16px; color: var(--mid); margin: 0; }
+@media(max-width:760px) {
+ .watch-subtitle { font-size: 25px; padding: 12px 20px; }
+ .watch-transport { padding-inline: 20px; }
+ .watch-state { font-size: 12px; gap: 12px; }
+ .watch-mockup .mockup-heading { padding-inline: 20px; }
+ .watch-mockup .mockup-heading span:last-child { font-size: 14px; }
+ .watch-mockup .mockup-explanation h3 { font-size: 25px; }
+ .after-viewing-steps { grid-template-columns: 1fr; gap: 24px; }
+ .after-viewing-steps li { display: grid; grid-template-columns: 24px 1fr; gap: 8px 12px; }
+ .after-viewing-steps li::before { grid-row: span 2; margin-top: 5px; }
+ .after-viewing-steps h4 { margin: 0; font-size: 22px; }
+ .after-viewing-steps p { grid-column: 2; }
+ .viewing-options h4 { font-size: 26px; }
+}

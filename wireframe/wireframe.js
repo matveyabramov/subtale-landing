@@ -31,6 +31,24 @@
   selectExample('idiom');
   document.querySelector('.example-tabs').hidden = false;
 
+  // Choosing an interpretation is optional and never gates the shared explanation.
+  const ironyPanel = document.querySelector('#panel-irony');
+  const interpretation = ironyPanel.querySelector('.interpretation-choice');
+  const comparison = ironyPanel.querySelector('.interpretation-feedback');
+  const ironyCard = ironyPanel.querySelector('[data-scratch]');
+  function compareInterpretation() {
+    const selected = interpretation.querySelector('input:checked');
+    const exposed = ironyCard.dataset.revealed !== 'false';
+    comparison.hidden = !selected || !exposed;
+    comparison.textContent = selected && exposed
+      ? selected.value === 'ironic'
+        ? 'Твоя версия совпала с разбором: герой досадует из-за уехавшего лифта.'
+        : 'Твоя версия — искренняя радость. В разборе — ирония: лифт уехал, а герою предстоит нести сумки по лестнице.'
+      : '';
+  }
+  interpretation.addEventListener('change', compareInterpretation);
+  ironyCard.addEventListener('scratchchange', compareInterpretation);
+
   document.querySelectorAll('a[href="#demo"]').forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault();

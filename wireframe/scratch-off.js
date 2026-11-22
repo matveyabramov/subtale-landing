@@ -72,6 +72,7 @@
       revealButton.setAttribute('aria-disabled', 'true');
       resetButton.hidden = false;
       if (announce) status.textContent = `Объяснение открыто: ${answer.querySelector('h3').textContent.replace(/\s+/g, ' ')}.`;
+      card.dispatchEvent(new CustomEvent('scratchchange', { detail: { revealed: true } }));
     }
     function coverage() {
       const pixels = context.getImageData(0, 0, canvas.width, canvas.height);
@@ -132,6 +133,7 @@
       paint();
       revealButton.focus();
       status.textContent = 'Покрытие восстановлено. Можно стереть его снова или открыть объяснение кнопкой.';
+      card.dispatchEvent(new CustomEvent('scratchchange', { detail: { revealed: false } }));
     });
     answer.setAttribute('aria-hidden', 'true');
     answer.inert = true;
