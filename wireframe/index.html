@@ -16,7 +16,7 @@
 <header class="header" id="top">
  <div class="container header-inner">
   <a class="logo" href="#top" aria-label="Subtale — наверх">subtale*</a>
-  <nav aria-label="Навигация"><a href="#demo">Примеры</a><a href="#how">Как смотреть</a><a href="#faq">Вопросы</a></nav>
+  <nav aria-label="Навигация"><a href="#demo">Примеры</a><a href="#comparison">Сравнение</a><a href="#faq">Вопросы</a></nav>
   <a class="button dark header-cta" href="#beta-signup" data-beta-open hidden>Записаться на бета-тест</a>
  </div>
 </header>
@@ -49,27 +49,9 @@
  <div class="container">
   <div class="section-intro"><h2 id="demo-title" tabindex="-1">Три сцены,<br><span class="muted">три повода разобраться</span></h2><p>Знакомые слова могут звучать по-разному в разных сценах. Во вкладке «Ирония» можно выбрать свою трактовку и сверить её с разбором. Объяснение в каждой сцене доступно сразу — стиранием или кнопкой.</p></div>
   <div class="example-tabs" role="tablist" aria-label="Примеры разбора" hidden>
-   <button type="button" role="tab" id="tab-idiom" aria-controls="panel-idiom" aria-selected="true" tabindex="0">01 <span>Идиома</span></button>
-   <button type="button" role="tab" id="tab-irony" aria-controls="panel-irony" aria-selected="false" tabindex="-1">02 <span>Ирония</span></button>
+   <button type="button" role="tab" id="tab-irony" aria-controls="panel-irony" aria-selected="true" tabindex="0">01 <span>Ирония</span></button>
+   <button type="button" role="tab" id="tab-idiom" aria-controls="panel-idiom" aria-selected="false" tabindex="-1">02 <span>Идиома</span></button>
    <button type="button" role="tab" id="tab-reference" aria-controls="panel-reference" aria-selected="false" tabindex="-1">03 <span>Отсылка</span></button>
-  </div>
-  <div class="example-panel" id="panel-idiom" data-example="idiom">
-   <div class="dialogue-stage">
-    <p class="scene-context">Первый день в новой команде. За столом неловкое молчание.</p>
-    <svg class="scene-art" viewBox="0 0 640 330" aria-hidden="true"><rect x="52" y="38" width="170" height="105" fill="#eee" stroke="#999"/><path d="M137 38v105M52 91h170" stroke="#aaa"/><rect x="460" y="40" width="120" height="125" fill="#d4d4d4" stroke="#aaa"/><path d="M475 65h80m-80 22h65m-65 22h70" stroke="#999"/><circle cx="215" cy="145" r="27" fill="#929292"/><path d="M166 242v-52q49-40 98 0v52" fill="#aaa"/><circle cx="415" cy="145" r="27" fill="#777"/><path d="M366 242v-52q49-40 98 0v52" fill="#929292"/><path d="M144 230h350v18H144z" fill="#777"/><path d="M165 248v65m305-65v65" stroke="#777" stroke-width="12"/><path d="M290 209h25v20h-25zM325 209h25v20h-25z" fill="#eee" stroke="#666"/></svg>
-    <div class="dialogue"><p class="scene-line scene-lead-in" lang="en">“Nobody’s saying a word.”</p><p class="scene-line" lang="en">“Let’s <mark>break the ice</mark>. Who wants coffee?”</p></div>
-   </div>
-   <div class="meaning-card">
-    <p class="card-label">Что значит break the ice в этой сцене?</p>
-    <p class="scratch-instruction" id="scratch-hint-idiom">Открой смысл выражения и узнай, зачем герой сказал это здесь.</p>
-    <div class="scratch-actions"><button class="button dark scratch-reveal" type="button" aria-controls="answer-idiom" aria-expanded="false" hidden>Показать объяснение</button><button class="scratch-reset text-link" type="button" hidden>Стереть ещё раз</button></div>
-    <div class="scratch-card" data-scratch="idiom">
-     <div class="scratch-answer" id="answer-idiom"><h3>Начать общение,<br>снять неловкость</h3><p><span lang="en">Break the ice</span> — помочь людям почувствовать себя свободнее в начале общения. Герой предлагает кофе, чтобы дать новым коллегам повод заговорить.</p><p class="scratch-translation">«Все молчат».<br>«Давайте разрядим обстановку. Кто хочет кофе?»</p></div>
-     <canvas class="scratch-canvas" aria-hidden="true" hidden></canvas>
-    </div>
-    <p class="scratch-status visually-hidden" role="status" aria-live="polite"></p>
-    <button class="button save-button" type="button" data-save="idiom" aria-pressed="false" hidden>Отметить на потом <span aria-hidden="true">+</span></button>
-   </div>
   </div>
   <div class="example-panel" id="panel-irony" data-example="irony">
    <div class="dialogue-stage">
@@ -93,6 +75,24 @@
     </div>
     <p class="scratch-status visually-hidden" role="status" aria-live="polite"></p>
     <button class="button save-button" type="button" data-save="irony" aria-pressed="false" hidden>Отметить на потом <span aria-hidden="true">+</span></button>
+   </div>
+  </div>
+  <div class="example-panel" id="panel-idiom" data-example="idiom">
+   <div class="dialogue-stage">
+    <p class="scene-context">Первый день в новой команде. За столом неловкое молчание.</p>
+    <svg class="scene-art" viewBox="0 0 640 330" aria-hidden="true"><rect x="52" y="38" width="170" height="105" fill="#eee" stroke="#999"/><path d="M137 38v105M52 91h170" stroke="#aaa"/><rect x="460" y="40" width="120" height="125" fill="#d4d4d4" stroke="#aaa"/><path d="M475 65h80m-80 22h65m-65 22h70" stroke="#999"/><circle cx="215" cy="145" r="27" fill="#929292"/><path d="M166 242v-52q49-40 98 0v52" fill="#aaa"/><circle cx="415" cy="145" r="27" fill="#777"/><path d="M366 242v-52q49-40 98 0v52" fill="#929292"/><path d="M144 230h350v18H144z" fill="#777"/><path d="M165 248v65m305-65v65" stroke="#777" stroke-width="12"/><path d="M290 209h25v20h-25zM325 209h25v20h-25z" fill="#eee" stroke="#666"/></svg>
+    <div class="dialogue"><p class="scene-line scene-lead-in" lang="en">“Nobody’s saying a word.”</p><p class="scene-line" lang="en">“Let’s <mark>break the ice</mark>. Who wants coffee?”</p></div>
+   </div>
+   <div class="meaning-card">
+    <p class="card-label">Что значит break the ice в этой сцене?</p>
+    <p class="scratch-instruction" id="scratch-hint-idiom">Открой смысл выражения и узнай, зачем герой сказал это здесь.</p>
+    <div class="scratch-actions"><button class="button dark scratch-reveal" type="button" aria-controls="answer-idiom" aria-expanded="false" hidden>Показать объяснение</button><button class="scratch-reset text-link" type="button" hidden>Стереть ещё раз</button></div>
+    <div class="scratch-card" data-scratch="idiom">
+     <div class="scratch-answer" id="answer-idiom"><h3>Начать общение,<br>снять неловкость</h3><p><span lang="en">Break the ice</span> — помочь людям почувствовать себя свободнее в начале общения. Герой предлагает кофе, чтобы дать новым коллегам повод заговорить.</p><p class="scratch-translation">«Все молчат».<br>«Давайте разрядим обстановку. Кто хочет кофе?»</p></div>
+     <canvas class="scratch-canvas" aria-hidden="true" hidden></canvas>
+    </div>
+    <p class="scratch-status visually-hidden" role="status" aria-live="polite"></p>
+    <button class="button save-button" type="button" data-save="idiom" aria-pressed="false" hidden>Отметить на потом <span aria-hidden="true">+</span></button>
    </div>
   </div>
   <div class="example-panel" id="panel-reference" data-example="reference">
@@ -145,19 +145,88 @@
  </div>
 </section>
 
+<section class="section evening-section" id="evening" aria-labelledby="evening-title">
+ <div class="container">
+  <figure class="evening-frame"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="evening-art-title">
+ <title id="evening-art-title">Вечер дома: зритель устроился на диване с чашкой и смотрит сериал с английскими субтитрами</title>
+ <rect width="1200" height="600" fill="#e7e7e7"/>
+ <path d="M0 453H1200" stroke="#bbb"/>
+ <rect y="454" width="1200" height="146" fill="#d6d6d6"/>
+ <rect x="62" y="52" width="211" height="244" fill="#777" stroke="#aaa" stroke-width="8"/>
+ <path d="M168 52V296M62 175H273" stroke="#ddd" stroke-width="7"/>
+ <circle cx="106" cy="103" r="3" fill="#eee"/><circle cx="215" cy="214" r="2" fill="#eee"/><circle cx="230" cy="87" r="2" fill="#eee"/>
+ <path d="M333 243V465" stroke="#858585" stroke-width="7"/>
+ <path d="M296 242L310 173H356L371 242Z" fill="#f7f7f7" stroke="#aaa"/>
+ <ellipse cx="333" cy="466" rx="42" ry="7" fill="#aaa"/>
+ <g class="evening-tv">
+ <rect x="650" y="82" width="374" height="267" rx="8" fill="#333"/>
+ <rect x="663" y="95" width="348" height="239" fill="#aaa"/>
+ <rect x="778" y="108" width="89" height="76" fill="#d7d7d7"/>
+ <path d="M822 108V184" stroke="#b2b2b2"/>
+ <circle cx="727" cy="189" r="25" fill="#777"/><path d="M686 275V224Q727 194 768 224V275" fill="#858585"/>
+ <circle cx="947" cy="189" r="25" fill="#666"/><path d="M906 275V224Q947 194 988 224V275" fill="#777"/>
+ <path d="M699 262H976V273H699Z" fill="#666"/>
+ <rect x="663" y="281" width="348" height="53" fill="#303030"/>
+ <text x="837" y="313" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="18" fill="#fff" lang="en">Shall we get some coffee?</text>
+ <path d="M837 349V369M798 371H878" stroke="#555" stroke-width="6"/>
+ <rect x="626" y="379" width="425" height="65" fill="#bebebe" stroke="#999"/>
+ <path d="M762 379V444M907 379V444M649 444V463M1027 444V463" stroke="#999" stroke-width="3"/>
+ </g>
+ <ellipse cx="687" cy="538" rx="367" ry="37" fill="#c4c4c4"/>
+ <rect x="212" y="331" width="390" height="166" rx="30" fill="#939393"/>
+ <rect x="235" y="352" width="162" height="90" rx="16" fill="#a2a2a2"/>
+ <rect x="405" y="352" width="171" height="90" rx="16" fill="#a2a2a2"/>
+ <circle cx="447" cy="266" r="36" fill="#666"/>
+ <path d="M421 304Q468 280 497 322L532 421H383L392 348Q395 319 421 304Z" fill="#737373"/>
+ <path d="M421 333L388 398L356 404M477 333L526 379L555 375" fill="none" stroke="#777" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M456 418L511 454L571 451M414 423L453 483L512 490" fill="none" stroke="#555" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+ <rect x="204" y="409" width="405" height="102" rx="23" fill="#888"/>
+ <rect x="185" y="378" width="65" height="132" rx="19" fill="#a5a5a5"/>
+ <rect x="572" y="378" width="65" height="132" rx="19" fill="#a5a5a5"/>
+ <path d="M230 510V534M592 510V534" stroke="#666" stroke-width="12"/>
+ <path d="M704 488V546M879 488V546" stroke="#777" stroke-width="6"/>
+ <ellipse cx="791" cy="484" rx="124" ry="25" fill="#aaa" stroke="#888"/>
+ <path d="M767 450H796V478H767Z" fill="#f6f6f6" stroke="#888"/><path d="M796 455Q817 455 810 469Q807 476 796 471" fill="none" stroke="#eee" stroke-width="5"/>
+ <path d="M1118 400V301M1118 350Q1065 338 1070 291Q1125 294 1118 350M1118 377Q1169 353 1160 315Q1112 323 1118 377" fill="#888" stroke="#888" stroke-width="5"/>
+ <path d="M1080 400H1157L1143 462H1094Z" fill="#aaa"/>
+</svg></figure>
+  <div class="evening-copy"><h2 id="evening-title">Ещё одна серия —<br>в оригинале</h2><p>Устройся поудобнее и отдыхай за любимым сюжетом. А несколько выражений из него можно будет забрать в свой следующий разговор.</p></div>
+ </div>
+</section>
+
+<section class="section comparison-section" id="comparison" aria-labelledby="comparison-title">
+ <div class="container">
+  <div class="section-intro"><h2 id="comparison-title">Какой инструмент подойдёт<br><span class="muted">твоему вечеру</span></h2></div>
+  <ul class="comparison-legend" id="comparison-legend" aria-label="Обозначения в сравнении">
+   <li><b>✓</b> Подтверждено описанием сервиса</li><li><b>✦</b> Можно попробовать в демо Subtale</li><li><b>◇</b> Задумано для приложения Subtale</li><li><b>·</b> Нет подтверждения на указанных страницах</li>
+  </ul>
+  <table class="comparison-table" role="table" aria-labelledby="comparison-title" aria-describedby="comparison-legend comparison-note">
+   <colgroup><col class="task-column"><col class="subtale-column"><col><col><col></colgroup>
+   <thead role="rowgroup"><tr role="row"><th scope="col" id="compare-task" role="columnheader">Задача зрителя</th><th scope="col" id="compare-subtale" role="columnheader" class="is-subtale">Subtale</th><th scope="col" id="compare-lr" role="columnheader">Language Reactor</th><th scope="col" id="compare-migaku" role="columnheader">Migaku</th><th scope="col" id="compare-contenta" role="columnheader">Contenta</th></tr></thead>
+   <tbody role="rowgroup">
+    <tr role="row"><th scope="row" id="task-during" role="rowheader">Понять реплику по ходу фильма</th><td role="cell" headers="task-during compare-subtale" class="is-subtale"><span class="mobile-service" aria-hidden="true">Subtale</span><div class="feature-cell">◇ Подсказка в плеере</div></td><td role="cell" headers="task-during compare-lr"><span class="mobile-service" aria-hidden="true">Language Reactor</span><div class="feature-cell">✓ Перевод и AI‑словарь</div></td><td role="cell" headers="task-during compare-migaku"><span class="mobile-service" aria-hidden="true">Migaku</span><div class="feature-cell">✓ Перевод и разбор предложения</div></td><td role="cell" headers="task-during compare-contenta"><span class="mobile-service" aria-hidden="true">Contenta</span><div class="feature-cell">✓ Перевод и объяснение идиом</div></td></tr>
+    <tr role="row"><th scope="row" id="task-later" role="rowheader">Вернуться к выражению позже</th><td role="cell" headers="task-later compare-subtale" class="is-subtale"><span class="mobile-service" aria-hidden="true">Subtale</span><div class="feature-cell">✦ Отметки на этой странице<br>◇ Коллекция в приложении</div></td><td role="cell" headers="task-later compare-lr"><span class="mobile-service" aria-hidden="true">Language Reactor</span><div class="feature-cell">✓ Сохранённые фразы и экспорт</div></td><td role="cell" headers="task-later compare-migaku"><span class="mobile-service" aria-hidden="true">Migaku</span><div class="feature-cell">✓ Карточки со сценой и повторение</div></td><td role="cell" headers="task-later compare-contenta"><span class="mobile-service" aria-hidden="true">Contenta</span><div class="feature-cell">✓ Личный словарь и повторение</div></td></tr>
+    <tr role="row"><th scope="row" id="task-interpret" role="rowheader">Сверить свою трактовку сцены</th><td role="cell" headers="task-interpret compare-subtale" class="is-subtale"><span class="mobile-service" aria-hidden="true">Subtale</span><div class="feature-cell"><a class="comparison-demo" href="#demo" data-example-link="irony">✦ Попробовать в демо</a></div></td><td role="cell" headers="task-interpret compare-lr"><span class="mobile-service" aria-hidden="true">Language Reactor</span><div class="feature-cell">· Не подтверждено</div></td><td role="cell" headers="task-interpret compare-migaku"><span class="mobile-service" aria-hidden="true">Migaku</span><div class="feature-cell">· Не подтверждено</div></td><td role="cell" headers="task-interpret compare-contenta"><span class="mobile-service" aria-hidden="true">Contenta</span><div class="feature-cell">· Не подтверждено</div></td></tr>
+    <tr role="row"><th scope="row" id="task-notice" role="rowheader">Заметить деталь, которая могла пройти мимо</th><td role="cell" headers="task-notice compare-subtale" class="is-subtale"><span class="mobile-service" aria-hidden="true">Subtale</span><div class="feature-cell">✦ Смысл через детали сцены</div></td><td role="cell" headers="task-notice compare-lr"><span class="mobile-service" aria-hidden="true">Language Reactor</span><div class="feature-cell">✓ Рекомендации слов</div></td><td role="cell" headers="task-notice compare-migaku"><span class="mobile-service" aria-hidden="true">Migaku</span><div class="feature-cell">✓ Рекомендации слов и предложений</div></td><td role="cell" headers="task-notice compare-contenta"><span class="mobile-service" aria-hidden="true">Contenta</span><div class="feature-cell">✓ Подсветка идиом в субтитрах</div></td></tr>
+   </tbody>
+  </table>
+  <div class="comparison-notes" id="comparison-note"><p>Подписи называют конкретные функции. Рекомендации слов у Language Reactor и Migaku и подсветка идиом у Contenta помогают заметить языковые детали. Они не подтверждают автоматический поиск пропущенных шуток, подтекста или деталей сюжета. Возможности могут зависеть от тарифа и платформы.</p><p>В строке о трактовке сравниваем отдельный сценарий «выбрать свою версию и сверить с разбором». Знак · означает, что подтверждение не найдено, а не что функции нет. Демо Subtale показывает подготовленные сцены; отметки остаются только на этой странице.</p></div>
+  <p class="comparison-sources">Официальные описания, проверено 22 ноября 2026: <a href="https://www.languagereactor.com/">Language Reactor — функции</a>, <a href="https://www.languagereactor.com/pro-mode">Pro</a>, <a href="https://www.languagereactor.com/help/export">сохранение</a>; <a href="https://migaku.com/faq/features">Migaku</a>; <a href="https://contenta.me/">Contenta</a>.</p>
+ </div>
+</section>
+
 <section class="section faq-section" id="faq" aria-labelledby="faq-title">
  <div class="container faq-grid">
-  <div><h2 id="faq-title">Перед бета-тестом</h2><p>Что можно попробовать сейчас и чего ждать дальше.</p></div>
+  <h2 id="faq-title">Вопросы о Subtale</h2>
   <div class="faq-list">
-   <details><summary>Кому подойдёт Subtale? <span aria-hidden="true">+</span></summary><p>Тем, кто хочет смотреть кино на английском и разбираться в живой речи: выражениях, шутках и отсылках. Начать можно с трёх сцен выше — в них есть ситуация, английские реплики и пояснения.</p></details>
-   <details><summary>Что можно попробовать сейчас? <span aria-hidden="true">+</span></summary><p>На этой странице можно открыть три разбора, стереть покрытие с объяснения и отметить реплику на потом. В блоке практики — посмотреть, как сказать ту же фразу в другой ситуации. Полноценный просмотр с Subtale ещё создаётся.</p></details>
-   <details><summary>Как узнать о начале тестирования? <span aria-hidden="true">+</span></summary><p>Когда начнём приглашать участников, мы напишем на почту из заявки. Дата пока не объявлена. Сейчас форма работает как демо: данные не отправляются, запись на тест ещё не подключена.</p></details>
+   <details><summary>Кому подойдёт Subtale? <span aria-hidden="true">+</span></summary><p>Если ты уже следишь за сюжетом с английскими субтитрами, но иногда теряешь смысл реплики: слова знакомы, а шутка, намёк или реакция героя остаются неясными.</p></details>
+   <details><summary>Как связаны подсказка и разбор? <span aria-hidden="true">+</span></summary><p>Во время фильма можно будет открыть короткую подсказку и смотреть дальше. После титров — вернуться к отмеченной сцене, сверить свою трактовку с разбором и сохранить полезное выражение.</p></details>
   </div>
  </div>
 </section>
 
 <section class="section final-section" id="action" aria-labelledby="action-title">
- <div class="container final-grid"><h2 id="action-title">Попробовать Subtale<br><span class="muted">на бета-тесте</span></h2><div><p>Оставь имя и почту — мы напишем, когда начнём приглашать участников.</p><p class="access-note">Сейчас доступна демоформа. Заявки ещё не отправляются.</p><a class="button dark" href="#beta-signup" data-beta-open>Записаться на бета-тест</a></div></div>
+ <div class="container final-grid"><h2 id="action-title">Попробовать Subtale<br><span class="muted">на бета-тесте</span></h2><div><p>Когда начнём приглашать участников бета-теста, напишем на почту из заявки. Дата старта пока не объявлена.</p><a class="button dark" href="#beta-signup" data-beta-open>Записаться на бета-тест</a></div></div>
 </section>
 </main>
 <footer class="container footer"><a class="logo" href="#top" aria-label="Subtale — наверх">subtale*</a><a href="#top">Наверх ↑</a></footer>

@@ -28,7 +28,7 @@
     panels[index].setAttribute('aria-labelledby', tab.id);
     panels[index].tabIndex = 0;
   });
-  selectExample('idiom');
+  selectExample('irony');
   document.querySelector('.example-tabs').hidden = false;
 
   // Choosing an interpretation is optional and never gates the shared explanation.
